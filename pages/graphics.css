@@ -1,0 +1,105 @@
+<!-- File: `pages/graphics.css` -->
+<style>
+:root{
+  --gfx-accent-1: rgba(108,92,231,0.18);
+  --gfx-accent-2: rgba(0,184,148,0.12);
+  --gfx-accent-3: rgba(253,150,68,0.08);
+}
+
+/* full-screen gradient backdrop */
+.site-bg{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background: linear-gradient(120deg, rgba(108,92,231,0.06), rgba(0,184,148,0.03) 40%, rgba(253,150,68,0.02));
+  background-size:200% 200%;
+  animation: bgShift 18s linear infinite;
+  will-change: transform, filter;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* blurred floating blobs on top of gradient */
+.page::before,
+.page::after{
+  content:"";
+  position:fixed;
+  width:480px;
+  height:480px;
+  border-radius:50%;
+  z-index:-1;
+  pointer-events:none;
+  filter: blur(48px) saturate(120%);
+  mix-blend-mode: screen;
+  transform: translate3d(0,0,0);
+  opacity:0.95;
+}
+
+.page::before{
+  left:-12%;
+  top:-8%;
+  background: radial-gradient(circle at 30% 30%, rgba(108,92,231,0.95), rgba(108,92,231,0.18) 30%, transparent 60%);
+  animation: floatBlobA 10s ease-in-out infinite;
+}
+.page::after{
+  right:-12%;
+  bottom:-6%;
+  width:420px;
+  height:420px;
+  background: radial-gradient(circle at 70% 30%, rgba(0,184,148,0.9), rgba(253,150,68,0.06) 35%, transparent 60%);
+  animation: floatBlobB 12s ease-in-out infinite;
+}
+
+/* small accent under header */
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-18px;
+  width:70%;
+  height:36px;
+  border-radius:18px;
+  background: linear-gradient(90deg, rgba(108,92,231,0.06), rgba(0,184,148,0.04));
+  z-index:-1;
+  filter: blur(10px);
+}
+
+/* subtle floating of avatar already defined - improve with GPU */
+.logo .avatar{
+  transition: transform .45s cubic-bezier(.2,.9,.28,1), box-shadow .45s;
+  will-change: transform;
+}
+
+/* particle canvas sits above gradient, behind content */
+#bg-canvas{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  opacity:0.9;
+}
+
+/* small utility for reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+  .site-bg, .page::before, .page::after, #bg-canvas { animation: none !important; transition: none !important; }
+}
+
+/* animations */
+@keyframes bgShift{
+  0%{ background-position:0% 50% }
+  50%{ background-position:100% 50% }
+  100%{ background-position:0% 50% }
+}
+@keyframes floatBlobA{
+  0%{ transform: translateY(0) rotate(0deg) scale(1) }
+  50%{ transform: translateY(-28px) rotate(6deg) scale(1.03) }
+  100%{ transform: translateY(0) rotate(0deg) scale(1) }
+}
+@keyframes floatBlobB{
+  0%{ transform: translateY(0) rotate(0deg) scale(1) }
+  50%{ transform: translateY(32px) rotate(-6deg) scale(0.98) }
+  100%{ transform: translateY(0) rotate(0deg) scale(1) }
+}
+</style>
+

@@ -1,34 +1,54 @@
+<!-- html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>vpauls.github.io</title>
-  <head>
-    <title>Vipin Paulson - Portfolio</title>
-    <link rel="stylesheet" href="/pages/style.css">
-  </head>
+  <title>Vipin Paulson — Portfolio</title>
+  <link rel="stylesheet" href="pages/style.css">
+  <link rel="stylesheet" href="pages/graphics.css"> <script src="pages/graphics.js" defer></script>
 </head>
 <body>
-<header>
-  <h1>Vipin Paulson</h1>
-  <h3>Software Architect & Technical Consultant</h3>
-</header>
+<div class="page">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img class="avatar" src="./images/vipin_profile.png" alt="Vipin Paulson" />
+        <div class="title">
+          <h1>Vipin Paulson</h1>
+          <p class="subtitle">Software Architect & Technical Consultant</p>
+        </div>
+      </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="./pages/about.html">About</a>
-  <a href="./pages/experience.html">Experience</a>
-  <a href="./pages/contact.html">Contact</a>
-</nav>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="./pages/about.html">About</a>
+        <a href="./pages/experience.html">Experience</a>
+        <a href="./pages/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="container">
-  <div class="section">
-    <h2>Welcome to My Portfolio</h2>
-    <p>Explore my work, experience, and technical expertise across 11+ years of enterprise software development.</p>
-  </div>
+  <main class="container">
+    <div class="section">
+      <h2>Welcome</h2>
+      <p class="lead">Experienced Software Architect specializing in cloud-native systems, microservices, and enterprise solutions. I design scalable architectures and lead cross-functional teams to deliver reliable, production-ready systems.</p>
+
+      <h3>Quick links</h3>
+      <ul class="profile-list small">
+        <li><strong>Experience:</strong> 11+ years in enterprise software</li>
+        <li><strong>Focus:</strong> Cloud modernization, Distributed Systems</li>
+        <li><strong>Availability:</strong> Open to senior roles & consulting</li>
+      </ul>
+
+      <div style="margin-top:14px;">
+        <a href="./pages/contact.html" style="background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;">Get in touch</a>
+        <a href="./pages/about.html" style="margin-left:10px;color:var(--primary);text-decoration:none;font-weight:600;">About & Skills</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Vipin Paulson</footer>
 </div>
-
-<footer>&copy; 2025 Vipin Paulson</footer>
 </body>
 </html>

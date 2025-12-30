@@ -1,27 +1,180 @@
-
-<!DOCTYPE html>
-<html>
+<!-- html -->
+<!-- Updated file: `pages/about.html` -->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>About - Vipin Paulson</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Vipin Paulson</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages/graphics.css"> <script src="pages/graphics.js" defer></script>
 </head>
 <body>
-<header><h1>About Me</h1></header>
-
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-    <div class="section">
-        <h2>Profile Summary</h2>
-        <p>Agile-oriented Software Architect with expertise in scalable system design, cloud modernization, and Java ecosystem.</p>
+<div class="page fullscreen">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img class="avatar" src="/images/vipin_profile.png" alt="Vipin Paulson" />
+        <div class="title">
+          <h1>Vipin Paulson</h1>
+          <p class="subtitle">Software Architect & Technical Consultant</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-</div>
+  </header>
 
-<footer>&copy; 2025 Vipin Paulson</footer>
+  <main class="container">
+    <div class="section">
+      <div class="about-grid">
+        <div class="profile-column">
+          <div class="profile-header">
+            <img class="profile-avatar" src="/images/vipin_profile.png" alt="Vipin Paulson" />
+            <div class="profile-title">
+              <h1>Vipin Paulson</h1>
+              <div class="subtitle">Software Architect & Technical Consultant</div>
+              <div style="margin-top:8px;">
+                <span class="experience-badge">14+ Years of Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tagline">
+            Transforming Business Challenges into Cloud-Native Solutions<br>
+            Driving Innovation Through Technology Leadership
+          </div>
+
+          <div class="highlights-section" style="margin-top:12px;">
+            <div class="section-title">Core Competencies</div>
+            <div class="highlight-grid">
+              <div class="highlight-card">
+                <div class="card-title">☁ Cloud Architecture</div>
+                <div class="card-text">AWS &amp; Azure solutions, migration strategies, serverless architectures, CI/CD pipelines</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="card-title">👥 Technical Leadership</div>
+                <div class="card-text">Cross-functional team management, mentoring, agile methodologies, stakeholder engagement</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="card-title">🚀 Innovation &amp; Automation</div>
+                <div class="card-text">Process optimization, automation tools, performance enhancement, productivity gains</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="card-title">🏦 Domain Expertise</div>
+                <div class="card-text">Banking &amp; Finance, Securities, Payment Systems, Regulatory Compliance</div>
+              </div>
+            </div>
+          </div>
+
+          <section class="expertise-section">
+            <h2>Expertise</h2>
+            <p class="lead">Core strengths and hands-on experience — focused areas first.</p>
+
+            <div class="expertise-grid">
+              <article class="expertise-card" data-skill="Cloud Architecture">
+                <div class="card-head">
+                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.35 10.04A7 7 0 0 0 5 9a5 5 0 0 0 .5 9.96h13A4.5 4.5 0 0 0 23 14.5c0-2.37-1.93-4.26-3.65-4.46z"/></svg>
+                  <div>
+                    <div class="skill-name">Cloud Architecture</div>
+                    <div class="skill-meta small muted">Designing resilient, cost‑efficient cloud platforms</div>
+                  </div>
+                  <div class="skill-badge">Primary</div>
+                </div>
+
+                <div class="skill-bar" aria-hidden="true">
+                  <div class="skill-fill" style="width:88%"></div>
+                </div>
+                <div class="skill-percent">88%</div>
+
+                <ul class="skill-points small">
+                  <li>Microservices & event-driven design</li>
+                  <li>Containerization & orchestration (K8s)</li>
+                </ul>
+              </article>
+
+              <article class="expertise-card" data-skill="Data Platforms">
+                <div class="card-head">
+                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-18v6h8V3h-8z"/></svg>
+                  <div>
+                    <div class="skill-name">Data Platforms</div>
+                    <div class="skill-meta small muted">Streaming, ETL and real‑time analytics</div>
+                  </div>
+                  <div class="skill-badge">Core</div>
+                </div>
+
+                <div class="skill-bar" aria-hidden="true">
+                  <div class="skill-fill" style="width:76%"></div>
+                </div>
+                <div class="skill-percent">76%</div>
+
+                <ul class="skill-points small">
+                  <li>Kafka, Spark, real-time ingestion</li>
+                  <li>Secure data pipelines</li>
+                </ul>
+              </article>
+
+              <article class="expertise-card" data-skill="Architectural Leadership">
+                <div class="card-head">
+                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l4 4h-3v6h-2V6H8l4-4zM6 10v10h12V10H6z"/></svg>
+                  <div>
+                    <div class="skill-name">Architectural Leadership</div>
+                    <div class="skill-meta small muted">Technical strategy & team mentoring</div>
+                  </div>
+                  <div class="skill-badge">Focus</div>
+                </div>
+
+                <div class="skill-bar" aria-hidden="true">
+                  <div class="skill-fill" style="width:82%"></div>
+                </div>
+                <div class="skill-percent">82%</div>
+
+                <ul class="skill-points small">
+                  <li>Technology roadmap & migrations</li>
+                  <li>Stakeholder alignment</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="expertise-chips">
+              <span class="expertise-chip">Microservices</span>
+              <span class="expertise-chip">Kubernetes</span>
+              <span class="expertise-chip">AWS / GCP</span>
+              <span class="expertise-chip">Event-driven</span>
+              <span class="expertise-chip">CI/CD</span>
+              <span class="expertise-chip">Observability</span>
+            </div>
+          </section>
+
+
+          <div class="highlights-section career-highlights" style="margin-top:18px;">
+            <div class="section-title">Career Highlights</div>
+            <div style="margin-top:10px;">
+              <p>✓ <strong>Led cloud migration initiatives</strong> resulting in substantial cost reduction and improved operational agility for Fortune 500 clients</p>
+              <p>✓ <strong>Designed and delivered POC demonstrations</strong> that secured multi-million dollar project approvals</p>
+              <p>✓ <strong>Mentored 20+ developers</strong> fostering innovation and technical excellence across teams</p>
+              <p>✓ <strong>Reduced issue resolution time by 30%</strong> through implementation of advanced debugging tools</p>
+            </div>
+          </div>
+
+          <div class="awards-banner">
+            🏆 Multiple Awards: "Shining Star" | "Dream Team" | "Super Star" | "Feather in the Cap"
+          </div>
+        </div>
+
+        <!-- Contact moved to `pages/contact.html` - leaving the aside out for a cleaner about layout -->
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Vipin Paulson</footer>
+</div>
 </body>
 </html>
