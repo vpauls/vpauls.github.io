@@ -1,180 +1,988 @@
-<!-- html -->
-<!-- Updated file: `pages/about.html` -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About - Vipin Paulson</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="pages/graphics.css"> <script src="pages/graphics.js" defer></script>
+
+  <!-- ==========================================================
+       META
+  =========================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+
+    About | Vipin Paulson
+
+  </title>
+
+  <meta name="description"
+        content="About Vipin Paulson | Enterprise Solution Architect">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/architecture.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
 </head>
+
 <body>
-<div class="page fullscreen">
-  <header class="site-header">
+
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+
+  <div class="container">
+
     <div class="header-inner">
-      <div class="logo">
-        <img class="avatar" src="/images/vipin_profile.png" alt="Vipin Paulson" />
-        <div class="title">
-          <h1>Vipin Paulson</h1>
-          <p class="subtitle">Software Architect & Technical Consultant</p>
-        </div>
-      </div>
-      <nav class="main-nav" aria-label="Main">
-        <a href="../index.html">Home</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
+
+      <a href="../index.html"
+         class="brand">
+
+<span class="brand-mark">
+
+VP
+
+</span>
+
+        <span class="brand-text">
+
+Vipin Paulson
+
+</span>
+
+      </a>
+
+      <nav class="main-nav">
+
+        <a href="architecture.html">
+
+          Architecture
+
+        </a>
+
+        <a href="case-studies.html">
+
+          Case Studies
+
+        </a>
+
+        <a href="career.html">
+
+          Career
+
+        </a>
+
+        <a href="skills.html">
+
+          Skills
+
+        </a>
+
+        <a class="active"
+           href="about.html">
+
+          About
+
+        </a>
+
+        <a href="contact.html">
+
+          Contact
+
+        </a>
+
       </nav>
+
+      <div class="header-actions">
+
+        <button id="themeToggle"
+                class="theme-toggle">
+
+          🌙
+
+        </button>
+
+        <button class="menu-toggle">
+
+          ☰
+
+        </button>
+
+      </div>
+
     </div>
-  </header>
 
-  <main class="container">
-    <div class="section">
-      <div class="about-grid">
-        <div class="profile-column">
-          <div class="profile-header">
-            <img class="profile-avatar" src="/images/vipin_profile.png" alt="Vipin Paulson" />
-            <div class="profile-title">
-              <h1>Vipin Paulson</h1>
-              <div class="subtitle">Software Architect & Technical Consultant</div>
-              <div style="margin-top:8px;">
-                <span class="experience-badge">14+ Years of Excellence</span>
-              </div>
-            </div>
-          </div>
+  </div>
 
-          <div class="tagline">
-            Transforming Business Challenges into Cloud-Native Solutions<br>
-            Driving Innovation Through Technology Leadership
-          </div>
+</header>
 
-          <div class="highlights-section" style="margin-top:12px;">
-            <div class="section-title">Core Competencies</div>
-            <div class="highlight-grid">
-              <div class="highlight-card">
-                <div class="card-title">☁ Cloud Architecture</div>
-                <div class="card-text">AWS &amp; Azure solutions, migration strategies, serverless architectures, CI/CD pipelines</div>
-              </div>
+<main>
 
-              <div class="highlight-card">
-                <div class="card-title">👥 Technical Leadership</div>
-                <div class="card-text">Cross-functional team management, mentoring, agile methodologies, stakeholder engagement</div>
-              </div>
+  <!-- ==========================================================
+       HERO
+  =========================================================== -->
 
-              <div class="highlight-card">
-                <div class="card-title">🚀 Innovation &amp; Automation</div>
-                <div class="card-text">Process optimization, automation tools, performance enhancement, productivity gains</div>
-              </div>
+  <section class="hero">
 
-              <div class="highlight-card">
-                <div class="card-title">🏦 Domain Expertise</div>
-                <div class="card-text">Banking &amp; Finance, Securities, Payment Systems, Regulatory Compliance</div>
-              </div>
-            </div>
-          </div>
+    <div class="container">
 
-          <section class="expertise-section">
-            <h2>Expertise</h2>
-            <p class="lead">Core strengths and hands-on experience — focused areas first.</p>
+      <div class="hero-content reveal">
 
-            <div class="expertise-grid">
-              <article class="expertise-card" data-skill="Cloud Architecture">
-                <div class="card-head">
-                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.35 10.04A7 7 0 0 0 5 9a5 5 0 0 0 .5 9.96h13A4.5 4.5 0 0 0 23 14.5c0-2.37-1.93-4.26-3.65-4.46z"/></svg>
-                  <div>
-                    <div class="skill-name">Cloud Architecture</div>
-                    <div class="skill-meta small muted">Designing resilient, cost‑efficient cloud platforms</div>
-                  </div>
-                  <div class="skill-badge">Primary</div>
-                </div>
+<span class="eyebrow">
 
-                <div class="skill-bar" aria-hidden="true">
-                  <div class="skill-fill" style="width:88%"></div>
-                </div>
-                <div class="skill-percent">88%</div>
+Beyond Architecture
 
-                <ul class="skill-points small">
-                  <li>Microservices & event-driven design</li>
-                  <li>Containerization & orchestration (K8s)</li>
-                </ul>
-              </article>
+</span>
 
-              <article class="expertise-card" data-skill="Data Platforms">
-                <div class="card-head">
-                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-18v6h8V3h-8z"/></svg>
-                  <div>
-                    <div class="skill-name">Data Platforms</div>
-                    <div class="skill-meta small muted">Streaming, ETL and real‑time analytics</div>
-                  </div>
-                  <div class="skill-badge">Core</div>
-                </div>
+        <h1>
 
-                <div class="skill-bar" aria-hidden="true">
-                  <div class="skill-fill" style="width:76%"></div>
-                </div>
-                <div class="skill-percent">76%</div>
+          Building Technology
+          With Purpose
 
-                <ul class="skill-points small">
-                  <li>Kafka, Spark, real-time ingestion</li>
-                  <li>Secure data pipelines</li>
-                </ul>
-              </article>
+        </h1>
 
-              <article class="expertise-card" data-skill="Architectural Leadership">
-                <div class="card-head">
-                  <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l4 4h-3v6h-2V6H8l4-4zM6 10v10h12V10H6z"/></svg>
-                  <div>
-                    <div class="skill-name">Architectural Leadership</div>
-                    <div class="skill-meta small muted">Technical strategy & team mentoring</div>
-                  </div>
-                  <div class="skill-badge">Focus</div>
-                </div>
+        <p class="hero-description">
 
-                <div class="skill-bar" aria-hidden="true">
-                  <div class="skill-fill" style="width:82%"></div>
-                </div>
-                <div class="skill-percent">82%</div>
+          Building technology is my profession.
+          Creating meaningful solutions that empower
+          businesses and people is my purpose.
 
-                <ul class="skill-points small">
-                  <li>Technology roadmap & migrations</li>
-                  <li>Stakeholder alignment</li>
-                </ul>
-              </article>
-            </div>
+        </p>
 
-            <div class="expertise-chips">
-              <span class="expertise-chip">Microservices</span>
-              <span class="expertise-chip">Kubernetes</span>
-              <span class="expertise-chip">AWS / GCP</span>
-              <span class="expertise-chip">Event-driven</span>
-              <span class="expertise-chip">CI/CD</span>
-              <span class="expertise-chip">Observability</span>
-            </div>
-          </section>
+      </div>
+
+    </div>
+
+  </section>
 
 
-          <div class="highlights-section career-highlights" style="margin-top:18px;">
-            <div class="section-title">Career Highlights</div>
-            <div style="margin-top:10px;">
-              <p>✓ <strong>Led cloud migration initiatives</strong> resulting in substantial cost reduction and improved operational agility for Fortune 500 clients</p>
-              <p>✓ <strong>Designed and delivered POC demonstrations</strong> that secured multi-million dollar project approvals</p>
-              <p>✓ <strong>Mentored 20+ developers</strong> fostering innovation and technical excellence across teams</p>
-              <p>✓ <strong>Reduced issue resolution time by 30%</strong> through implementation of advanced debugging tools</p>
-            </div>
-          </div>
 
-          <div class="awards-banner">
-            🏆 Multiple Awards: "Shining Star" | "Dream Team" | "Super Star" | "Feather in the Cap"
-          </div>
+
+
+  <!-- ==========================================================
+       MY STORY
+  =========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+My Story
+
+</span>
+
+        <h2>
+
+          From Curiosity
+          to Enterprise Architecture
+
+        </h2>
+
+      </div>
+
+      <div class="story-layout">
+
+        <p>
+
+          Technology has always fascinated me—not because of its complexity,
+          but because of its ability to solve real-world challenges.
+          What began as curiosity evolved into a passion for building
+          enterprise solutions that improve how businesses operate.
+
+        </p>
+
+        <p>
+
+          Throughout my career, I discovered that successful technology
+          isn't defined by the frameworks or cloud platforms behind it.
+          It's defined by how effectively it supports people,
+          processes and business objectives.
+
+        </p>
+
+        <p>
+
+          Today, I focus on designing scalable, secure and adaptable
+          architectures that enable organizations to innovate with confidence
+          while creating lasting business value.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     MY VALUES
+=========================================================== -->
+
+  <section class="page-section section-alt reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Values
+
+</span>
+
+        <h2>
+
+          The Principles That Guide Me
+
+        </h2>
+
+        <p>
+
+          Every project, decision and collaboration is built
+          on a consistent set of professional values.
+
+        </p>
+
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+
+          <h3>
+
+            Integrity
+
+          </h3>
+
+          <p>
+
+            Do the right thing,
+            even when it's difficult.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Ownership
+
+          </h3>
+
+          <p>
+
+            Take responsibility
+            for outcomes,
+            not just deliverables.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Simplicity
+
+          </h3>
+
+          <p>
+
+            The best solutions
+            are often the simplest.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Collaboration
+
+          </h3>
+
+          <p>
+
+            Great ideas emerge
+            through teamwork
+            and trust.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Curiosity
+
+          </h3>
+
+          <p>
+
+            Keep exploring,
+            learning and improving.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Excellence
+
+          </h3>
+
+          <p>
+
+            Deliver quality
+            with consistency
+            and purpose.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     HOW I WORK
+=========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Approach
+
+</span>
+
+        <h2>
+
+          How I Work
+
+        </h2>
+
+        <p>
+
+          Every engagement follows a collaborative,
+          business-focused and outcome-driven approach.
+
+        </p>
+
+      </div>
+
+      <div class="journey-grid">
+
+        <article class="journey-card">
+
+          <span>01</span>
+
+          <h3>
+
+            Understand
+
+          </h3>
+
+          <p>
+
+            Listen first,
+            understand objectives
+            and define success.
+
+          </p>
+
+        </article>
+
+        <article class="journey-card">
+
+          <span>02</span>
+
+          <h3>
+
+            Collaborate
+
+          </h3>
+
+          <p>
+
+            Work closely with
+            stakeholders,
+            architects and teams.
+
+          </p>
+
+        </article>
+
+        <article class="journey-card">
+
+          <span>03</span>
+
+          <h3>
+
+            Design
+
+          </h3>
+
+          <p>
+
+            Create solutions that
+            balance simplicity,
+            security and scalability.
+
+          </p>
+
+        </article>
+
+        <article class="journey-card">
+
+          <span>04</span>
+
+          <h3>
+
+            Deliver
+
+          </h3>
+
+          <p>
+
+            Focus on execution,
+            quality and measurable
+            business outcomes.
+
+          </p>
+
+        </article>
+
+        <article class="journey-card">
+
+          <span>05</span>
+
+          <h3>
+
+            Improve
+
+          </h3>
+
+          <p>
+
+            Learn continuously
+            and evolve every
+            solution.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     LEADERSHIP PHILOSOPHY
+=========================================================== -->
+
+  <section class="page-section section-alt reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Leadership
+
+</span>
+
+        <h2>
+
+          Leadership Philosophy
+
+        </h2>
+
+        <p>
+
+          Leadership is about creating an environment
+          where people can succeed together.
+
+        </p>
+
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+
+          <h3>
+
+            Empower
+
+          </h3>
+
+          <p>
+
+            Give people ownership
+            and trust them
+            to deliver.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Coach
+
+          </h3>
+
+          <p>
+
+            Share knowledge,
+            encourage growth
+            and build confidence.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Simplify
+
+          </h3>
+
+          <p>
+
+            Reduce complexity
+            through thoughtful
+            architecture.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Inspire
+
+          </h3>
+
+          <p>
+
+            Lead through action,
+            integrity and
+            continuous learning.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     BEYOND TECHNOLOGY
+=========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Beyond Technology
+
+</span>
+
+        <h2>
+
+          Always Learning,
+          Always Exploring
+
+        </h2>
+
+        <p>
+
+          Technology changes rapidly, but curiosity,
+          adaptability and continuous learning remain timeless.
+
+        </p>
+
+      </div>
+
+      <div class="chip-grid">
+
+        <span class="chip">Enterprise Architecture</span>
+
+        <span class="chip">Artificial Intelligence</span>
+
+        <span class="chip">Cloud Computing</span>
+
+        <span class="chip">Distributed Systems</span>
+
+        <span class="chip">Leadership</span>
+
+        <span class="chip">Mentoring</span>
+
+        <span class="chip">Problem Solving</span>
+
+        <span class="chip">Innovation</span>
+
+        <span class="chip">Business Strategy</span>
+
+        <span class="chip">Continuous Learning</span>
+
+        <span class="chip">Knowledge Sharing</span>
+
+        <span class="chip">Technology Trends</span>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     LOOKING AHEAD
+=========================================================== -->
+
+  <section class="page-section section-alt reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+            <span class="eyebrow">
+
+                Looking Ahead
+
+            </span>
+
+        <h2>
+
+          Shaping the Future,
+          One Architecture at a Time
+
+        </h2>
+
+        <p>
+
+          Technology continues to evolve, but the goal remains the same:
+          designing solutions that are secure, scalable and built around
+          real business needs.
+
+        </p>
+
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+
+          <h3>
+
+            Intelligent Enterprises
+
+          </h3>
+
+          <p>
+
+            Combining AI, automation and cloud-native
+            architecture to enable smarter decision-making.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Sustainable Architecture
+
+          </h3>
+
+          <p>
+
+            Designing platforms that remain adaptable,
+            maintainable and resilient for years to come.
+
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            Continuous Innovation
+
+          </h3>
+
+          <p>
+
+            Exploring emerging technologies while
+            keeping business value at the center of
+            every architectural decision.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ==========================================================
+       PERSONAL STATEMENT
+  =========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="quote-card">
+
+        <blockquote>
+
+          "Great architecture balances business vision,
+          engineering excellence, and long-term scalability."
+
+        </blockquote>
+
+        <p>
+
+          This belief has guided every solution I've designed,
+          every team I've led and every business challenge
+          I've helped solve.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ==========================================================
+       CALL TO ACTION
+  =========================================================== -->
+
+  <section class="page-section cta-section reveal">
+
+    <div class="container">
+
+      <div class="cta">
+
+            <span class="eyebrow">
+
+                Let's Build Together
+
+            </span>
+
+        <h2>
+
+          Every Great Solution
+          Starts With
+          A Conversation
+
+        </h2>
+
+        <p>
+
+          Whether you're modernizing enterprise platforms,
+          defining cloud strategy or building the next generation
+          of digital solutions, I'd be glad to connect and explore
+          how we can create meaningful business value together.
+
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="contact.html"
+             class="btn btn-primary">
+
+            Let's Connect
+
+          </a>
+
+          <a href="../docs/VIPIN_PAULSON_RESUME.pdf"
+             class="btn btn-secondary">
+
+            Download Resume
+
+          </a>
+
         </div>
 
-        <!-- Contact moved to `pages/contact.html` - leaving the aside out for a cleaner about layout -->
       </div>
-    </div>
-  </main>
 
-  <footer>&copy; 2025 Vipin Paulson</footer>
-</div>
+    </div>
+
+  </section>
+
+</main>
+
+
+
+
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <h3>
+
+          Vipin Paulson
+
+        </h3>
+
+        <p>
+
+          Enterprise Solution Architect
+
+        </p>
+
+        <small>
+
+          Designing technology that creates
+          measurable business value.
+
+        </small>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="../index.html">Home</a>
+
+        <a href="architecture.html">Architecture</a>
+
+        <a href="case-studies.html">Case Studies</a>
+
+        <a href="career.html">Career</a>
+
+        <a href="skills.html">Skills</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+
+        © 2026 Vipin Paulson. All Rights Reserved.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+<!-- ==========================================================
+     BACK TO TOP
+=========================================================== -->
+
+<button class="back-to-top"
+        aria-label="Back to Top">
+
+  ↑
+
+</button>
+
+
+
+
+
+<!-- ==========================================================
+     JAVASCRIPT
+=========================================================== -->
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/animations.js" defer></script>
+<script src="../js/counters.js" defer></script>
+<script src="../js/charts.js" defer></script>
+<script src="../js/theme.js" defer></script>
+<script src="../js/app.js" defer></script>
+
 </body>
+
 </html>

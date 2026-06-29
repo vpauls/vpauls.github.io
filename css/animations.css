@@ -1,0 +1,435 @@
+/*==========================================================
+    ANIMATIONS.CSS
+    Enterprise Portfolio Animation Library
+    --------------------------------------------------------
+    Purpose:
+    • Reusable Keyframes
+    • Reveal Utilities
+    • Animation Helpers
+    • Delay Helpers
+    • Loading Effects
+    • Reduced Motion
+==========================================================*/
+
+
+/*==========================================================
+KEYFRAMES
+==========================================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:none;
+
+    }
+
+    50%{
+
+        box-shadow:0 0 20px rgba(37,99,235,.35);
+
+    }
+
+    100%{
+
+        box-shadow:none;
+
+    }
+
+}
+
+@keyframes rotateSlow{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes shine{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(200%);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+
+/*==========================================================
+REVEAL SYSTEM
+==========================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+
+        opacity .7s ease,
+
+        transform .7s ease;
+
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+/*==========================================================
+ANIMATION HELPERS
+==========================================================*/
+
+.fade-in{
+
+    animation:fadeIn .8s ease both;
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.fade-left{
+
+    animation:fadeLeft .8s ease both;
+
+}
+
+.fade-right{
+
+    animation:fadeRight .8s ease both;
+
+}
+
+.zoom-in{
+
+    animation:zoomIn .8s ease both;
+
+}
+
+.float{
+
+    animation:float 8s ease-in-out infinite;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+.glow{
+
+    animation:glow 2s infinite;
+
+}
+
+.rotate{
+
+    animation:rotateSlow 30s linear infinite;
+
+}
+
+
+/*==========================================================
+DELAY HELPERS
+==========================================================*/
+
+.delay-1{
+
+    animation-delay:.1s;
+
+}
+
+.delay-2{
+
+    animation-delay:.2s;
+
+}
+
+.delay-3{
+
+    animation-delay:.3s;
+
+}
+
+.delay-4{
+
+    animation-delay:.4s;
+
+}
+
+.delay-5{
+
+    animation-delay:.5s;
+
+}
+
+
+/*==========================================================
+LOADING PLACEHOLDER
+==========================================================*/
+
+.loading{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    transform:translateX(-100%);
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    animation:shine 1.6s infinite;
+
+}
+
+
+/*==========================================================
+ANIMATION UTILITIES
+==========================================================*/
+
+.animate{
+
+    animation-duration:.8s;
+
+    animation-fill-mode:both;
+
+}
+
+.animate-fast{
+
+    animation-duration:.5s;
+
+}
+
+.animate-slow{
+
+    animation-duration:1.2s;
+
+}
+
+
+/*==========================================================
+REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}

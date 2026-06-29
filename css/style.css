@@ -1,0 +1,607 @@
+/*==========================================================
+    STYLE.CSS
+    Enterprise Portfolio
+    --------------------------------------------------------
+    Purpose:
+    • CSS Reset
+    • Base Elements
+    • Typography
+    • Layout
+    • Navigation
+    • Hero
+    • Footer
+==========================================================*/
+
+
+/*==========================================================
+CSS RESET
+==========================================================*/
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:var(--font-family);
+
+    font-size:var(--font-size-md);
+
+    line-height:var(--line-height);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/*==========================================================
+BASE ELEMENTS
+==========================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:var(--section-spacing) 0;
+
+}
+
+/*==========================================================
+TYPOGRAPHY
+==========================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--heading);
+
+    line-height:1.2;
+
+    font-weight:var(--font-weight-bold);
+
+}
+
+h1{
+
+    font-size:var(--font-size-5xl);
+
+}
+
+h2{
+
+    font-size:var(--font-size-4xl);
+
+}
+
+h3{
+
+    font-size:var(--font-size-2xl);
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+
+/*==========================================================
+LAYOUT
+==========================================================*/
+
+.container{
+
+    width:min(92%,var(--container-width));
+
+    margin:auto;
+
+}
+
+.content{
+
+    max-width:var(--content-width);
+
+    margin:auto;
+
+}
+
+.grid{
+
+    display:grid;
+
+    gap:2rem;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.site-header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:var(--header-height);
+
+    z-index:var(--z-header);
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(15,23,42,.82);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.header-inner{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+.avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+}
+
+.title h1{
+
+    font-size:1.2rem;
+
+}
+
+.subtitle{
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
+}
+
+/*==========================================================
+NAVIGATION
+==========================================================*/
+
+.main-nav{
+
+    display:flex;
+
+    gap:2rem;
+
+}
+
+.main-nav a{
+
+    position:relative;
+
+    color:var(--text-light);
+
+    transition:var(--transition);
+
+}
+
+.main-nav a:hover{
+
+    color:var(--secondary);
+
+}
+
+.main-nav a.active{
+
+    color:var(--secondary);
+
+}
+
+.main-nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:2px;
+
+    background:var(--secondary);
+
+}
+
+/*==========================================================
+PAGE
+==========================================================*/
+
+.page{
+
+    padding-top:var(--header-height);
+
+}
+
+/*==========================================================
+PAGE HERO
+==========================================================*/
+
+.hero{
+
+    min-height:calc(100vh - var(--header-height));
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    1.3fr
+
+    .7fr;
+
+    gap:5rem;
+
+    align-items:center;
+
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    gap:.5rem;
+
+    padding:.45rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--secondary);
+
+    margin-bottom:1.5rem;
+
+}
+
+.hero-title{
+
+    margin-bottom:1rem;
+
+}
+
+.hero-title span{
+
+    color:var(--secondary);
+
+}
+
+.hero-description{
+
+    font-size:1.15rem;
+
+    margin-bottom:2rem;
+
+    max-width:720px;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image img{
+
+    width:340px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,.08);
+
+    box-shadow:var(--shadow-primary);
+
+}
+
+/*==========================================================
+SECTION TITLES
+==========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:3rem;
+
+}
+
+.section-title h2{
+
+    margin-bottom:1rem;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*==========================================================
+FOOTER
+==========================================================*/
+
+footer{
+
+    border-top:1px solid var(--border);
+
+    padding:2rem 0;
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+}
+
+/*==========================================================
+COMMON PAGE SPACING
+==========================================================*/
+
+.page-section{
+
+    margin-bottom:var(--section-spacing);
+
+}
+
+/*==========================================================
+UTILITY CLASSES
+==========================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+.mt-1{
+
+    margin-top:.5rem;
+
+}
+
+.mt-2{
+
+    margin-top:1rem;
+
+}
+
+.mt-3{
+
+    margin-top:2rem;
+
+}
+
+.mb-1{
+
+    margin-bottom:.5rem;
+
+}
+
+.mb-2{
+
+    margin-bottom:1rem;
+
+}
+
+.mb-3{
+
+    margin-bottom:2rem;
+
+}
+
+/*==========================================================
+    LAYOUT UTILITIES
+==========================================================*/
+
+.page-section{
+
+    padding:6rem 0;
+
+}
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:2rem;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 4rem;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    margin-bottom:1rem;
+
+}
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding-top:2rem;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:.75rem;
+
+}

@@ -1,98 +1,703 @@
-<!-- html -->
-<!-- Updated file: `pages/contact.html` -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact - Vipin Paulson</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="pages/graphics.css"> <script src="pages/graphics.js" defer></script>
+
+  <!-- ==========================================================
+       META
+  =========================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+
+    Contact | Vipin Paulson
+
+  </title>
+
+  <meta name="description"
+        content="Contact Vipin Paulson | Enterprise Solution Architect">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/architecture.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
 </head>
+
 <body>
-<div class="page">
-  <header class="site-header">
+
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+
+  <div class="container">
+
     <div class="header-inner">
-      <div class="logo">
-        <img class="avatar" src="/images/vipin_profile.png" alt="Vipin Paulson" />
-        <div class="title">
-          <h1>Vipin Paulson</h1>
-          <p class="subtitle">Software Architect & Technical Consultant</p>
-        </div>
-      </div>
-      <nav class="main-nav" aria-label="Main">
-        <a href="../index.html">Home</a>
+
+      <a href="../index.html" class="brand">
+
+        <span class="brand-mark">VP</span>
+
+        <span class="brand-text">
+
+                    Vipin Paulson
+
+                </span>
+
+      </a>
+
+      <nav class="main-nav">
+
+        <a href="architecture.html">Architecture</a>
+
+        <a href="case-studies.html">Case Studies</a>
+
+        <a href="career.html">Career</a>
+
+        <a href="skills.html">Skills</a>
+
         <a href="about.html">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html" aria-current="page">Contact</a>
+
+        <a class="active"
+           href="contact.html">
+
+          Contact
+
+        </a>
+
       </nav>
+
+      <div class="header-actions">
+
+        <button id="themeToggle"
+                class="theme-toggle">
+
+          🌙
+
+        </button>
+
+        <button class="menu-toggle">
+
+          ☰
+
+        </button>
+
+      </div>
+
     </div>
-  </header>
 
-  <main class="container">
-    <div class="section">
-      <h2>Get in Touch</h2>
-      <p class="lead">Available for senior engineering and architecture roles, consulting, and technical leadership. Reach out via any of the channels below.</p>
+  </div>
 
-      <div class="grid" style="grid-template-columns:1fr 320px">
-        <div>
-          <div style="display:grid;gap:10px;">
-            <p><strong>Email:</strong> <a href="mailto:paulsonvipin@gmail.com" aria-label="Send an email to Vipin">paulsonvipin@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+447442013784" aria-label="Call Vipin">+44&nbsp;7442&nbsp;013784</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447442013784" target="_blank" rel="noopener noreferrer" aria-label="Chat with Vipin on WhatsApp">Chat on WhatsApp</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vipin-paulson" target="_blank" rel="noopener noreferrer" aria-label="Vipin Paulson on LinkedIn">linkedin.com/in/vipin-paulson</a></p>
-            <p><strong>Location:</strong> London, United Kingdom</p>
+</header>
+
+<main>
+
+  <!-- ==========================================================
+       HERO
+  =========================================================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content reveal">
+
+            <span class="eyebrow">
+
+                Let's Connect
+
+            </span>
+
+        <h1>
+
+          Every Great
+          Partnership
+          Starts With
+          A Conversation
+
+        </h1>
+
+        <p class="hero-description">
+
+          Whether you're modernizing enterprise platforms,
+          exploring cloud transformation or looking for
+          architecture leadership, I'd be delighted to connect.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ==========================================================
+       CONTACT OPTIONS
+  =========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+            <span class="eyebrow">
+
+                Contact
+
+            </span>
+
+        <h2>
+
+          Ways To Reach Me
+
+        </h2>
+
+        <p>
+
+          I'm always open to meaningful conversations,
+          architecture discussions and collaboration opportunities.
+
+        </p>
+
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+
+          <h3>
+
+            Email
+
+          </h3>
+
+          <p>
+
+            The best way to reach me
+            for professional enquiries.
+
+          </p>
+
+          <a href="mailto:your@email.com">
+
+            your@email.com
+
+          </a>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            LinkedIn
+
+          </h3>
+
+          <p>
+
+            Let's connect professionally
+            and share ideas.
+
+          </p>
+
+          <a href="#">
+
+            View Profile
+
+          </a>
+
+        </article>
+
+        <article class="card">
+
+          <h3>
+
+            GitHub
+
+          </h3>
+
+          <p>
+
+            Explore projects,
+            architecture examples
+            and code.
+
+          </p>
+
+          <a href="#">
+
+            Visit GitHub
+
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     CONTACT FORM
+=========================================================== -->
+
+  <section class="page-section section-alt reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Send a Message
+
+</span>
+
+        <h2>
+
+          Let's Start The Conversation
+
+        </h2>
+
+        <p>
+
+          Tell me a little about your project,
+          challenge or opportunity.
+
+        </p>
+
+      </div>
+
+      <form class="contact-form">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+
+            <label>
+
+              Name
+
+            </label>
+
+            <input
+                    type="text"
+                    placeholder="Your Name">
+
           </div>
 
-          <h3 style="margin-top:18px">Message</h3>
-          <form action="#" method="post" style="display:grid;gap:10px;">
-            <input name="name" aria-label="Your name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eefc" />
-            <input name="email" aria-label="Your email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid #e6eefc" />
-            <textarea name="message" aria-label="Your message" rows="5" placeholder="How can I help?" style="padding:10px;border-radius:8px;border:1px solid #e6eefc"></textarea>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
+          <div class="form-group">
+
+            <label>
+
+              Email
+
+            </label>
+
+            <input
+                    type="email"
+                    placeholder="your@email.com">
+
+          </div>
+
         </div>
 
-        <aside class="contact-card" aria-labelledby="quick-info">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-            <img src="/images/vipin_profile.png" alt="Vipin" style="width:72px;height:72px;border-radius:12px;object-fit:cover;box-shadow:var(--shadow)" />
-            <div>
-              <h3 id="quick-info" style="margin:0 0 6px 0">Contact</h3>
-              <div class="small muted">Open to remote or hybrid roles • Consulting</div>
-            </div>
-          </div>
+        <div class="form-group">
 
-          <div class="contact-item" style="margin:8px 0;">
-            <svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <a href="mailto:paulsonvipin@gmail.com">paulsonvipin@gmail.com</a>
-          </div>
+          <label>
 
-          <div class="contact-item" style="margin:8px 0;">
-            <svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            <a href="tel:+447442013784">+44&nbsp;7442&nbsp;013784</a>
-          </div>
+            Subject
 
-          <div class="contact-item" style="margin:8px 0;">
-            <svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            London, United Kingdom
-          </div>
+          </label>
 
-          <div class="contact-item" style="margin:8px 0;">
-            <svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-            <a href="https://www.linkedin.com/in/vipin-paulson" target="_blank" rel="noopener noreferrer">linkedin.com/in/vipin-paulson</a>
-          </div>
+          <input
+                  type="text"
+                  placeholder="Project Discussion">
 
-          <div style="margin-top:12px;">
-            <a class="contact-links" href="mailto:paulsonvipin@gmail.com">Email</a>
-            <a class="contact-links" href="https://www.linkedin.com/in/vipin-paulson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="contact-links" href="https://wa.me/447442013784" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </aside>
-      </div>
+        </div>
+
+        <div class="form-group">
+
+          <label>
+
+            Message
+
+          </label>
+
+          <textarea
+                  rows="8"
+                  placeholder="Tell me about your project..."></textarea>
+
+        </div>
+
+        <button
+                type="submit"
+                class="btn btn-primary">
+
+          Send Message
+
+        </button>
+
+      </form>
+
     </div>
-  </main>
 
-  <footer>&copy; 2025 Vipin Paulson</footer>
-</div>
+  </section>
+
+
+
+
+
+  <!-- ==========================================================
+       WHAT WE CAN DISCUSS
+  =========================================================== -->
+
+  <section class="page-section reveal">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+<span class="eyebrow">
+
+Topics
+
+</span>
+
+        <h2>
+
+          Let's Talk About
+
+        </h2>
+
+      </div>
+
+      <div class="chip-grid">
+
+<span class="chip">
+
+Enterprise Architecture
+
+</span>
+
+        <span class="chip">
+
+Cloud Transformation
+
+</span>
+
+        <span class="chip">
+
+AWS
+
+</span>
+
+        <span class="chip">
+
+Microservices
+
+</span>
+
+        <span class="chip">
+
+Digital Modernization
+
+</span>
+
+        <span class="chip">
+
+Platform Engineering
+
+</span>
+
+        <span class="chip">
+
+Solution Design
+
+</span>
+
+        <span class="chip">
+
+API Strategy
+
+</span>
+
+        <span class="chip">
+
+AI & Automation
+
+</span>
+
+        <span class="chip">
+
+Technical Leadership
+
+</span>
+
+        <span class="chip">
+
+Architecture Reviews
+
+</span>
+
+        <span class="chip">
+
+Consulting
+
+</span>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ==========================================================
+     AVAILABILITY
+=========================================================== -->
+
+  <section class="page-section section-alt reveal">
+
+    <div class="container">
+
+      <div class="summary-banner">
+
+        <div>
+
+<span class="eyebrow">
+
+Availability
+
+</span>
+
+          <h2>
+
+            Open To New
+            Opportunities
+
+          </h2>
+
+          <p>
+
+            I'm interested in enterprise architecture,
+            solution design, cloud transformation,
+            technical leadership and strategic consulting.
+
+          </p>
+
+        </div>
+
+        <div class="summary-metrics">
+
+          <div>
+
+            <h3>
+
+              Architecture
+
+            </h3>
+
+            <span>
+
+Enterprise
+
+</span>
+
+          </div>
+
+          <div>
+
+            <h3>
+
+              Cloud
+
+            </h3>
+
+            <span>
+
+AWS
+
+</span>
+
+          </div>
+
+          <div>
+
+            <h3>
+
+              Leadership
+
+            </h3>
+
+            <span>
+
+Technology
+
+</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ==========================================================
+       CTA
+  =========================================================== -->
+
+  <section class="page-section cta-section reveal">
+
+    <div class="container">
+
+      <div class="cta">
+
+<span class="eyebrow">
+
+Let's Build Together
+
+</span>
+
+        <h2>
+
+          Great Architecture Begins
+          With A Great Conversation
+
+        </h2>
+
+        <p>
+
+          Whether you're planning a new platform,
+          modernizing an existing solution,
+          or simply exchanging ideas,
+          I'd love to hear from you.
+
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+                  href="mailto:your@email.com"
+                  class="btn btn-primary">
+
+            Email Me
+
+          </a>
+
+          <a
+                  href="../docs/VIPIN_PAULSON_RESUME.pdf"
+                  class="btn btn-secondary">
+
+            Download Resume
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <h3>
+
+          Vipin Paulson
+
+        </h3>
+
+        <p>
+
+          Enterprise Solution Architect
+
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="../index.html">Home</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="career.html">Career</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+
+        © 2026 Vipin Paulson.
+        All Rights Reserved.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<button class="back-to-top"
+        aria-label="Back to Top">
+
+  ↑
+
+</button>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/animations.js" defer></script>
+<script src="../js/theme.js" defer></script>
+<script src="../js/app.js" defer></script>
+
 </body>
+
 </html>

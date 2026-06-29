@@ -1,54 +1,863 @@
-<!-- html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vipin Paulson — Portfolio</title>
-  <link rel="stylesheet" href="pages/style.css">
-  <link rel="stylesheet" href="pages/graphics.css"> <script src="pages/graphics.js" defer></script>
+
+    <!-- ==========================================================
+         META
+    =========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="description"
+          content="Vipin Paulson | Enterprise Solution Architect | AWS Certified | Banking | Payments | Cloud Architecture">
+
+    <meta name="keywords"
+          content="Enterprise Solution Architect, AWS, Java, Cloud, Banking, Payments, Architecture">
+
+    <meta name="author"
+          content="Vipin Paulson">
+
+    <title>
+
+        Vipin Paulson | Enterprise Solution Architect
+
+    </title>
+
+    <!-- ==========================================================
+         GOOGLE FONT
+    =========================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ==========================================================
+         CSS
+    =========================================================== -->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/architecture.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
+
 <body>
-<div class="page">
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <img class="avatar" src="./images/vipin_profile.png" alt="Vipin Paulson" />
-        <div class="title">
-          <h1>Vipin Paulson</h1>
-          <p class="subtitle">Software Architect & Technical Consultant</p>
+
+<!-- ==========================================================
+     SCROLL PROGRESS
+=========================================================== -->
+
+<div class="scroll-progress"></div>
+
+<!-- ==========================================================
+     HEADER
+=========================================================== -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <div class="header-inner">
+
+            <!-- Brand -->
+
+            <a href="index.html"
+               class="brand">
+
+                    <span class="brand-mark">
+
+                        VP
+
+                    </span>
+
+                <span class="brand-text">
+
+                        Vipin Paulson
+
+                    </span>
+
+            </a>
+
+            <!-- Navigation -->
+
+            <nav class="main-nav">
+
+                <a href="pages/architecture.html">
+
+                    Architecture
+
+                </a>
+
+                <a href="pages/case-studies.html">
+
+                    Case Studies
+
+                </a>
+
+                <a href="pages/career.html">
+
+                    Career
+
+                </a>
+
+                <a href="pages/contact.html">
+
+                    Contact
+
+                </a>
+
+            </nav>
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+                <button id="themeToggle"
+                        class="theme-toggle"
+                        aria-label="Toggle Theme">
+
+                    🌙
+
+                </button>
+
+                <button class="menu-toggle"
+                        aria-label="Open Navigation">
+
+                    ☰
+
+                </button>
+
+            </div>
+
         </div>
-      </div>
 
-      <nav class="main-nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/experience.html">Experience</a>
-        <a href="./pages/contact.html">Contact</a>
-      </nav>
     </div>
-  </header>
 
-  <main class="container">
-    <div class="section">
-      <h2>Welcome</h2>
-      <p class="lead">Experienced Software Architect specializing in cloud-native systems, microservices, and enterprise solutions. I design scalable architectures and lead cross-functional teams to deliver reliable, production-ready systems.</p>
+</header>
 
-      <h3>Quick links</h3>
-      <ul class="profile-list small">
-        <li><strong>Experience:</strong> 11+ years in enterprise software</li>
-        <li><strong>Focus:</strong> Cloud modernization, Distributed Systems</li>
-        <li><strong>Availability:</strong> Open to senior roles & consulting</li>
-      </ul>
+<!-- ==========================================================
+     MAIN
+=========================================================== -->
 
-      <div style="margin-top:14px;">
-        <a href="./pages/contact.html" style="background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;">Get in touch</a>
-        <a href="./pages/about.html" style="margin-left:10px;color:var(--primary);text-decoration:none;font-weight:600;">About & Skills</a>
-      </div>
+<main>
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+                    <span class="eyebrow">
+
+                        AWS Certified Solutions Architect Associate
+
+                    </span>
+
+                <h1>
+
+                    Architecting
+                    <br>
+
+                    Digital Enterprises
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Building secure, scalable cloud-native
+                    platforms that enable business transformation.
+
+                </p>
+
+                <div class="hero-highlights">
+
+                        <span>
+
+                            14+ Years
+
+                        </span>
+
+                    <span>
+
+                            Banking
+
+                        </span>
+
+                    <span>
+
+                            Payments
+
+                        </span>
+
+                    <span>
+
+                            Cloud
+
+                        </span>
+
+                </div>
+
+                <div class="hero-actions">
+
+                    <a href="pages/architecture.html"
+                       class="btn btn-primary">
+
+                        Explore Architecture
+
+                    </a>
+
+                    <a href="docs/VIPIN_PAULSON_RESUME.pdf"
+                       class="btn btn-secondary">
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         VISION
+    ======================================================= -->
+
+    <section class="page-section vision-section reveal">
+
+        <div class="container">
+
+            <blockquote class="vision-statement">
+
+                <p>
+
+                    “Great architecture balances business vision,
+                    engineering excellence, and long-term scalability.”
+
+                </p>
+
+            </blockquote>
+
+        </div>
+
+    </section>
+    <!-- ======================================================
+     TRUSTED BY EXPERIENCE
+======================================================= -->
+
+    <section class="page-section reveal">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                    <span class="eyebrow">
+
+                        Credibility
+
+                    </span>
+
+                <h2>
+
+                    Trusted by Experience
+
+                </h2>
+
+                <p>
+
+                    Delivering enterprise-scale architecture through
+                    business alignment, engineering excellence and
+                    cloud modernization.
+
+                </p>
+
+            </div>
+
+            <div class="dashboard-grid">
+
+                <!-- Years -->
+
+                <article class="metric-card">
+
+                        <span class="metric-label">
+
+                            Experience
+
+                        </span>
+
+                    <h3 class="metric-value"
+                        data-counter="14"
+                        data-suffix="+">
+
+                    </h3>
+
+                    <p>
+
+                        Years delivering enterprise solutions
+
+                    </p>
+
+                </article>
+
+                <!-- Solutions -->
+
+                <article class="metric-card">
+
+                        <span class="metric-label">
+
+                            Delivery
+
+                        </span>
+
+                    <h3 class="metric-value"
+                        data-counter="40"
+                        data-suffix="+">
+
+                    </h3>
+
+                    <p>
+
+                        Enterprise solutions designed and delivered
+
+                    </p>
+
+                </article>
+
+                <!-- Certification -->
+
+                <article class="metric-card">
+
+                        <span class="metric-label">
+
+                            Professional
+
+                        </span>
+
+                    <h3>
+
+                        AWS
+
+                    </h3>
+
+                    <p>
+
+                        Certified Solutions Architect
+
+                    </p>
+
+                </article>
+
+                <!-- Leadership -->
+
+                <article class="metric-card">
+
+                        <span class="metric-label">
+
+                            Leadership
+
+                        </span>
+
+                    <h3 class="metric-value"
+                        data-counter="10"
+                        data-suffix="+">
+
+                    </h3>
+
+                    <p>
+
+                        Agile engineering teams led
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         WHAT I SOLVE
+    ======================================================= -->
+
+    <section class="page-section reveal">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                    <span class="eyebrow">
+
+                        Capability
+
+                    </span>
+
+                <h2>
+
+                    What I Solve
+
+                </h2>
+
+                <p>
+
+                    Helping organizations modernize technology,
+                    simplify complexity and accelerate business value.
+
+                </p>
+
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Card 1 -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+
+                        🏛️
+
+                    </div>
+
+                    <h3>
+
+                        Modern Enterprise Architecture
+
+                    </h3>
+
+                    <p>
+
+                        Transform legacy systems into scalable,
+                        resilient and future-ready digital platforms.
+
+                    </p>
+
+                </article>
+
+                <!-- Card 2 -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+
+                        ☁️
+
+                    </div>
+
+                    <h3>
+
+                        Cloud Transformation
+
+                    </h3>
+
+                    <p>
+
+                        Accelerate cloud adoption with secure,
+                        cost-effective and cloud-native solutions.
+
+                    </p>
+
+                </article>
+
+                <!-- Card 3 -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+
+                        🔗
+
+                    </div>
+
+                    <h3>
+
+                        Enterprise Integration
+
+                    </h3>
+
+                    <p>
+
+                        Connect applications, APIs and business
+                        services using modern integration patterns.
+
+                    </p>
+
+                </article>
+
+                <!-- Card 4 -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+
+                        🚀
+
+                    </div>
+
+                    <h3>
+
+                        Technology Leadership
+
+                    </h3>
+
+                    <p>
+
+                        Enable engineering teams through architecture,
+                        mentoring and technical strategy.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ======================================================
+     IMPACT
+======================================================= -->
+
+    <section class="page-section reveal">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                    <span class="eyebrow">
+
+                        Impact
+
+                    </span>
+
+                <h2>
+
+                    Architecture That Delivered
+
+                </h2>
+
+                <p>
+
+                    Selected initiatives demonstrating how strategic architecture
+                    enables business transformation and engineering excellence.
+
+                </p>
+
+            </div>
+
+            <div class="card-grid">
+
+                <!-- ====================================== -->
+
+                <a href="pages/case-studies.html#payments"
+                   class="card feature-card">
+
+                        <span class="card-category">
+
+                            Banking & Payments
+
+                        </span>
+
+                    <h3>
+
+                        Enterprise Payments Platform
+
+                    </h3>
+
+                    <p>
+
+                        Modernized payment processing through
+                        cloud-native architecture, APIs and
+                        scalable integration.
+
+                    </p>
+
+                    <span class="card-link">
+
+                            Explore Case Study →
+
+                        </span>
+
+                </a>
+
+                <!-- ====================================== -->
+
+                <a href="pages/case-studies.html#document-ai"
+                   class="card feature-card">
+
+                        <span class="card-category">
+
+                            AI & Automation
+
+                        </span>
+
+                    <h3>
+
+                        Intelligent Document Processing
+
+                    </h3>
+
+                    <p>
+
+                        Automated document workflows using
+                        OCR, AI models and enterprise
+                        automation services.
+
+                    </p>
+
+                    <span class="card-link">
+
+                            Explore Case Study →
+
+                        </span>
+
+                </a>
+
+                <!-- ====================================== -->
+
+                <a href="pages/case-studies.html#modernization"
+                   class="card feature-card">
+
+                        <span class="card-category">
+
+                            Cloud Modernization
+
+                        </span>
+
+                    <h3>
+
+                        Enterprise Cloud Transformation
+
+                    </h3>
+
+                    <p>
+
+                        Led modernization initiatives focused on
+                        resilience, scalability and operational
+                        excellence.
+
+                    </p>
+
+                    <span class="card-link">
+
+                            Explore Case Study →
+
+                        </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         INVITATION
+    ======================================================= -->
+
+    <section class="page-section cta-section reveal">
+
+        <div class="container">
+
+            <div class="cta">
+
+                    <span class="eyebrow">
+
+                        Invitation
+
+                    </span>
+
+                <h2>
+
+                    Let's Build Together
+
+                </h2>
+
+                <p>
+
+                    Whether you're modernizing legacy platforms,
+                    designing enterprise architecture or accelerating
+                    cloud transformation, I'd be happy to connect.
+
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="pages/contact.html"
+                       class="btn btn-primary">
+
+                        Let's Connect
+
+                    </a>
+
+                    <a href="pages/architecture.html"
+                       class="btn btn-secondary">
+
+                        Explore Architecture
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+
+                    Vipin Paulson
+
+                </h3>
+
+                <p>
+
+                    Enterprise Solution Architect
+
+                </p>
+
+            </div>
+
+            <nav class="footer-nav">
+
+                <a href="pages/architecture.html">
+
+                    Architecture
+
+                </a>
+
+                <a href="pages/case-studies.html">
+
+                    Case Studies
+
+                </a>
+
+                <a href="pages/career.html">
+
+                    Career
+
+                </a>
+
+                <a href="pages/contact.html">
+
+                    Contact
+
+                </a>
+
+            </nav>
+
+            <div class="footer-social">
+
+                <a href="#">
+
+                    LinkedIn
+
+                </a>
+
+                <a href="#">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Vipin Paulson.
+                Crafted with purpose, clarity and modern engineering.
+
+            </p>
+
+        </div>
+
     </div>
-  </main>
 
-  <footer>&copy; 2025 Vipin Paulson</footer>
-</div>
+</footer>
+
+
+
+<!-- ======================================================
+     BACK TO TOP
+======================================================= -->
+
+<button class="back-to-top"
+        aria-label="Back to Top">
+
+    ↑
+
+</button>
+
+
+
+<!-- ======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script src="js/navigation.js" defer></script>
+
+<script src="js/animations.js" defer></script>
+
+<script src="js/counters.js" defer></script>
+
+<script src="js/charts.js" defer></script>
+
+<script src="js/theme.js" defer></script>
+
+<script src="js/contact.js" defer></script>
+
+<script src="js/app.js" defer></script>
+
 </body>
+
 </html>

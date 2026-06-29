@@ -1,0 +1,771 @@
+/*==========================================================
+    COMPONENTS.CSS
+    Enterprise Portfolio UI Components
+==========================================================*/
+
+
+/*==========================================================
+BUTTONS
+==========================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    height:var(--button-height);
+
+    padding:var(--button-padding);
+
+    border:none;
+
+    border-radius:var(--radius-pill);
+
+    cursor:pointer;
+
+    font-weight:var(--font-weight-semibold);
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--gradient-primary);
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-primary);
+
+}
+
+.btn-secondary{
+
+    background:transparent;
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+.btn-secondary:hover{
+
+    border-color:var(--primary);
+
+    color:var(--secondary);
+
+}
+
+.btn-outline{
+
+    background:none;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*==========================================================
+CARDS
+==========================================================*/
+
+.card{
+
+    background:var(--gradient-card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-xl);
+
+    padding:var(--card-padding);
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-primary);
+
+}
+
+.card-title{
+
+    margin-bottom:1rem;
+
+}
+
+.card-text{
+
+    color:var(--text-light);
+
+}
+
+/*==========================================================
+GLASS CARD
+==========================================================*/
+
+.glass{
+
+    background:var(--glass-bg);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(var(--glass-blur));
+
+}
+
+/*==========================================================
+BADGES
+==========================================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.45rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--secondary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.badge-outline{
+
+    border:1px solid var(--border);
+
+    background:none;
+
+}
+
+/*==========================================================
+TAGS
+==========================================================*/
+
+.tag{
+
+    display:inline-block;
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid var(--border);
+
+    color:var(--text-light);
+
+    font-size:.85rem;
+
+}
+
+/*==========================================================
+CHIPS
+==========================================================*/
+
+.chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.4rem;
+
+    padding:.5rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/*==========================================================
+FORMS
+==========================================================*/
+
+.form-group{
+
+    margin-bottom:1.5rem;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:.5rem;
+
+    font-weight:600;
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    height:var(--input-height);
+
+    padding:1rem;
+
+    background:var(--background-card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--input-radius);
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+input.error,
+textarea.error{
+
+    border-color:var(--danger);
+
+}
+
+input.success{
+
+    border-color:var(--success);
+
+}
+
+/*==========================================================
+CTA SECTION
+==========================================================*/
+
+.cta{
+
+    text-align:center;
+
+    padding:4rem 2rem;
+
+    border-radius:var(--radius-2xl);
+
+    background:var(--gradient-primary);
+
+    color:#fff;
+
+}
+
+.cta h2{
+
+    margin-bottom:1rem;
+
+}
+
+.cta p{
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:2rem;
+
+}
+
+/*==========================================================
+TIMELINE
+==========================================================*/
+
+.timeline{
+
+    position:relative;
+
+    padding-left:3rem;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:8px;
+
+    width:var(--timeline-width);
+
+    height:100%;
+
+    background:var(--primary);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:3rem;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-2.5rem;
+
+    top:.3rem;
+
+    width:var(--timeline-node);
+
+    height:var(--timeline-node);
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+}
+
+/*==========================================================
+COMPANY CARD
+==========================================================*/
+
+.company-card{
+
+    background:var(--gradient-card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-xl);
+
+    margin-bottom:2rem;
+
+    overflow:hidden;
+
+}
+
+.company-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:1.5rem 2rem;
+
+    cursor:pointer;
+
+}
+
+.company-content{
+
+    padding:0 2rem 2rem;
+
+}
+
+/*==========================================================
+ICON LIST
+==========================================================*/
+
+.icon-list{
+
+    display:grid;
+
+    gap:1rem;
+
+}
+
+.icon-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+}
+
+/*==========================================================
+TABLE
+==========================================================*/
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.table th,
+.table td{
+
+    padding:1rem;
+
+    border-bottom:1px solid var(--border);
+
+    text-align:left;
+
+}
+
+.table th{
+
+    color:var(--secondary);
+
+}
+
+/*==========================================================
+MODAL
+==========================================================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:var(--z-modal);
+
+}
+
+.modal.open{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.modal-content{
+
+    width:min(720px,90%);
+
+    background:var(--background-card);
+
+    border-radius:var(--radius-xl);
+
+    padding:2rem;
+
+    border:1px solid var(--border);
+
+}
+
+.modal-close{
+
+    float:right;
+
+    background:none;
+
+    border:none;
+
+    color:var(--text);
+
+    font-size:1.5rem;
+
+}
+
+/*==========================================================
+ALERTS
+==========================================================*/
+
+.alert{
+
+    padding:1rem 1.25rem;
+
+    border-radius:var(--radius-md);
+
+    margin-bottom:1rem;
+
+}
+
+.alert-success{
+
+    background:rgba(16,185,129,.15);
+
+    border-left:4px solid var(--success);
+
+}
+
+.alert-warning{
+
+    background:rgba(245,158,11,.15);
+
+    border-left:4px solid var(--warning);
+
+}
+
+.alert-danger{
+
+    background:rgba(239,68,68,.15);
+
+    border-left:4px solid var(--danger);
+
+}
+
+/*==========================================================
+CASE STUDY COMPONENTS
+==========================================================*/
+
+.case-study{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.case-study-header{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+    margin-bottom:2rem;
+}
+
+.case-number{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:1.5rem;
+    font-weight:700;
+    background:var(--primary-color);
+    color:#fff;
+}
+
+.case-study-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:3rem;
+    align-items:center;
+}
+
+.case-content h3{
+    margin-top:2rem;
+    margin-bottom:.75rem;
+}
+
+.case-content p{
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+/*==========================================================
+FEATURE LIST
+==========================================================*/
+
+.feature-list{
+
+    display:grid;
+
+    gap:.75rem;
+
+    margin-top:1rem;
+
+}
+
+.feature-list li{
+
+    list-style:none;
+
+    padding-left:1.75rem;
+
+    position:relative;
+
+}
+
+.feature-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--success-color);
+
+    font-weight:700;
+
+}
+
+.feature-list.success li{
+
+    font-weight:600;
+
+}
+/*==========================================================
+FEATURE LIST
+==========================================================*/
+
+.feature-list{
+
+    display:grid;
+
+    gap:.75rem;
+
+    margin-top:1rem;
+
+}
+
+.feature-list li{
+
+    list-style:none;
+
+    padding-left:1.75rem;
+
+    position:relative;
+
+}
+
+.feature-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--success-color);
+
+    font-weight:700;
+
+}
+
+.feature-list.success li{
+
+    font-weight:600;
+
+}
+/*==========================================================
+CHIPS
+==========================================================*/
+
+.chip-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.chip{
+
+    padding:.7rem 1.2rem;
+
+    border-radius:999px;
+
+    background:var(--surface-color);
+
+    border:1px solid var(--border-color);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.chip:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary-color);
+
+    color:#fff;
+
+}
+/*==========================================================
+CTA
+==========================================================*/
+
+.cta{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.cta h2{
+
+    margin-bottom:1rem;
+
+}
+
+.cta p{
+
+    margin-bottom:2rem;
+
+    color:var(--text-secondary);
+
+}

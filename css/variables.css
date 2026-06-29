@@ -1,0 +1,275 @@
+/*==========================================================
+    VARIABLES.CSS
+    Enterprise Portfolio Design System
+    --------------------------------------------------------
+    Purpose:
+    - Global Design Tokens
+    - Color Palette
+    - Typography
+    - Spacing
+    - Shadows
+    - Borders
+    - Layout
+    - Animation
+==========================================================*/
+
+:root{
+
+/*==========================================================
+    BRAND COLORS
+==========================================================*/
+
+--primary:#2563eb;
+--primary-light:#3b82f6;
+--primary-dark:#1d4ed8;
+
+--secondary:#38bdf8;
+--secondary-dark:#0284c7;
+
+--accent:#06b6d4;
+
+--success:#10b981;
+--warning:#f59e0b;
+--danger:#ef4444;
+--info:#0ea5e9;
+
+/*==========================================================
+    BACKGROUND COLORS
+==========================================================*/
+
+--background:#0f172a;
+--background-light:#111827;
+--background-card:#1e293b;
+--background-hover:#273449;
+
+--surface:#334155;
+--surface-light:#475569;
+
+/*==========================================================
+    TEXT COLORS
+==========================================================*/
+
+--text:#f8fafc;
+--text-light:#cbd5e1;
+--text-muted:#94a3b8;
+--text-dark:#0f172a;
+
+--heading:#ffffff;
+
+/*==========================================================
+    BORDER COLORS
+==========================================================*/
+
+--border:rgba(255,255,255,.08);
+--border-light:rgba(255,255,255,.15);
+--border-focus:var(--primary);
+
+/*==========================================================
+    GRADIENTS
+==========================================================*/
+
+--gradient-primary:
+linear-gradient(
+135deg,
+#2563eb,
+#38bdf8
+);
+
+--gradient-secondary:
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b
+);
+
+--gradient-card:
+linear-gradient(
+180deg,
+rgba(255,255,255,.04),
+rgba(255,255,255,.02)
+);
+
+--gradient-success:
+linear-gradient(
+135deg,
+#10b981,
+#34d399
+);
+
+/*==========================================================
+    TYPOGRAPHY
+==========================================================*/
+
+--font-family:
+"Inter",
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
+--font-size-xs:.75rem;
+--font-size-sm:.875rem;
+--font-size-md:1rem;
+--font-size-lg:1.125rem;
+--font-size-xl:1.25rem;
+--font-size-2xl:1.5rem;
+--font-size-3xl:2rem;
+--font-size-4xl:2.75rem;
+--font-size-5xl:3.5rem;
+
+--font-weight-light:300;
+--font-weight-normal:400;
+--font-weight-medium:500;
+--font-weight-semibold:600;
+--font-weight-bold:700;
+--font-weight-black:800;
+
+--line-height:1.6;
+--letter-spacing:.3px;
+
+/*==========================================================
+    SPACING
+==========================================================*/
+
+--space-xs:.25rem;
+--space-sm:.5rem;
+--space-md:1rem;
+--space-lg:1.5rem;
+--space-xl:2rem;
+--space-2xl:3rem;
+--space-3xl:4rem;
+--space-4xl:6rem;
+
+/*==========================================================
+    BORDER RADIUS
+==========================================================*/
+
+--radius-sm:6px;
+--radius-md:10px;
+--radius-lg:16px;
+--radius-xl:24px;
+--radius-2xl:32px;
+--radius-pill:999px;
+--radius-circle:50%;
+
+/*==========================================================
+    SHADOWS
+==========================================================*/
+
+--shadow-sm:
+0 2px 8px rgba(0,0,0,.15);
+
+--shadow-md:
+0 8px 24px rgba(0,0,0,.20);
+
+--shadow-lg:
+0 16px 40px rgba(0,0,0,.28);
+
+--shadow-xl:
+0 24px 60px rgba(0,0,0,.35);
+
+--shadow-primary:
+0 12px 30px rgba(37,99,235,.25);
+
+/*==========================================================
+    GLASS EFFECT
+==========================================================*/
+
+--glass-bg:
+rgba(255,255,255,.05);
+
+--glass-border:
+rgba(255,255,255,.08);
+
+--glass-blur:16px;
+
+/*==========================================================
+    LAYOUT
+==========================================================*/
+
+--container-width:1280px;
+--content-width:1100px;
+
+--header-height:80px;
+
+--section-spacing:6rem;
+
+--card-padding:2rem;
+
+/*==========================================================
+    Z INDEX
+==========================================================*/
+
+--z-background:-1;
+--z-default:1;
+--z-header:100;
+--z-dropdown:500;
+--z-overlay:900;
+--z-modal:1000;
+--z-tooltip:1100;
+
+/*==========================================================
+    TRANSITIONS
+==========================================================*/
+
+--transition-fast:.2s ease;
+--transition:.3s ease;
+--transition-slow:.5s ease;
+
+/*==========================================================
+    ANIMATION
+==========================================================*/
+
+--animation-duration:.8s;
+--animation-delay:.2s;
+
+/*==========================================================
+    DASHBOARD
+==========================================================*/
+
+--metric-card-height:180px;
+--chart-height:320px;
+
+/*==========================================================
+    TIMELINE
+==========================================================*/
+
+--timeline-width:4px;
+--timeline-node:18px;
+
+/*==========================================================
+    ARCHITECTURE
+==========================================================*/
+
+--node-size:70px;
+--diagram-gap:2rem;
+
+/*==========================================================
+    BUTTONS
+==========================================================*/
+
+--button-height:48px;
+--button-padding:0 1.75rem;
+
+/*==========================================================
+    FORMS
+==========================================================*/
+
+--input-height:52px;
+--input-radius:10px;
+
+/*==========================================================
+    BREAKPOINTS
+    (Documentation Only)
+==========================================================*/
+
+/*
+Mobile      : 576px
+Tablet      : 768px
+Laptop      : 992px
+Desktop     : 1200px
+Wide        : 1440px
+*/
+
+}
