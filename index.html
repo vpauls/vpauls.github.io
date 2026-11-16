@@ -1,863 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vipin Paulson | Enterprise Solution Architect</title>
+<meta name="description" content="Vipin Paulson, Solution Architect. AWS Certified. 14+ years delivering enterprise solutions in banking, financial services, securities and payments.">
+<meta name="keywords" content="Enterprise Solution Architect, AWS, Java, Spring Boot, Kafka, Banking, Payments, Cloud Architecture">
+<meta property="og:title" content="Vipin Paulson | Enterprise Solution Architect">
+<meta property="og:description" content="Secure, scalable cloud-native platforms for banking and payments.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#f7f9fc;--surface:#fff;--ink:#0f1b2d;--muted:#52627a;--line:#e1e7f0;--accent:#0b7a75;--accent-ink:#fff;--soft:#e6f4f3;--shadow:0 6px 24px rgba(15,27,45,.07);--accent2:#5b6cf0;--blob:.32}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1220;--surface:#111c30;--ink:#eaf0f8;--muted:#9aaac2;--line:#22304a;--accent:#3dd6c8;--accent-ink:#06201e;--soft:#12303a;--shadow:none;--accent2:#8f9cff;--blob:.2}}
+:root[data-theme="dark"]{--bg:#0a1220;--surface:#111c30;--ink:#eaf0f8;--muted:#9aaac2;--line:#22304a;--accent:#3dd6c8;--accent-ink:#06201e;--soft:#12303a;--shadow:none;--accent2:#8f9cff;--blob:.2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:.85rem}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{font-size:.92rem;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.tools{display:flex;gap:8px}
+.btn,.icon{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.icon{width:38px;height:38px}
+.menu{display:none}
+.btn{display:inline-block;padding:11px 22px;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:84px 0}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.015em;line-height:1.25;margin-bottom:14px}
+h3{font-size:1.08rem;line-height:1.35;margin-bottom:6px}
+.lead{color:var(--muted);font-size:1.12rem;max-width:620px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:36px}
+.hero{padding:96px 0 72px}
+.badge{display:inline-block;background:var(--soft);color:var(--accent);padding:6px 14px;border-radius:99px;font-size:.82rem;font-weight:600;margin-bottom:22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.stat,.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.stat strong{display:block;font-size:2rem;color:var(--accent);line-height:1.1}
+.stat span{color:var(--muted);font-size:.9rem}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card p{color:var(--muted);font-size:.95rem}
+.alt{background:color-mix(in srgb,var(--surface) 55%,transparent);backdrop-filter:blur(6px);border-block:1px solid var(--line)}
+.case{display:grid;gap:22px;grid-template-columns:1fr 1fr;margin-bottom:18px}
+.case .tag{font-size:.78rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.case h4{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:14px 0 4px}
+.case ul{padding-left:18px;color:var(--muted);font-size:.93rem}
+.flow{display:flex;flex-direction:column;gap:6px;justify-content:center}
+.flow span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:.88rem;font-weight:500;text-align:center}
+.flow span+span::before{content:"↓";display:block;color:var(--accent);line-height:1;margin-bottom:4px}
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:28px;display:grid;gap:28px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.when{color:var(--accent);font-weight:600;font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips span{background:var(--soft);color:var(--ink);border-radius:8px;padding:4px 12px;font-size:.84rem;font-weight:500}
+.job ul{padding-left:18px;color:var(--muted);margin-top:8px;font-size:.95rem}
+.split{display:grid;gap:40px;grid-template-columns:1fr 1fr}
+form{display:grid;gap:12px}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+input:focus,textarea:focus,.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.links{display:grid;gap:12px;margin-top:20px}
+.links a{display:flex;justify-content:space-between;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-weight:500}
+.links a:hover{border-color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:820px){
+ .stats{grid-template-columns:1fr 1fr}.case,.split{grid-template-columns:1fr}
+ .menu{display:grid}
+ nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px}
+ nav ul.open{display:flex}nav li a{display:block;padding:12px 0}
+ section{padding:60px 0}.hero{padding-top:64px}
+}
 
-    <!-- ==========================================================
-         META
-    =========================================================== -->
+/* ---- Aesthetic layer ---- */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bg::before{content:"";position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse at 50% 15%,#000 0,transparent 80%);mask-image:radial-gradient(ellipse at 50% 15%,#000 0,transparent 80%)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:var(--blob);animation:drift 24s ease-in-out infinite alternate}
+.b1{width:480px;height:480px;background:var(--accent);top:-140px;right:-120px}
+.b2{width:420px;height:420px;background:var(--accent2);top:40%;left:-170px;animation-delay:-9s}
+.b3{width:380px;height:380px;background:var(--accent);bottom:-120px;right:8%;animation-delay:-15s}
+.shape{position:absolute;opacity:.45;animation:float 16s ease-in-out infinite alternate}
+.s-ring{width:96px;height:96px;border:2px solid var(--accent);border-radius:50%;top:16%;left:5%}
+.s-sq{width:58px;height:58px;border:2px solid var(--accent2);border-radius:14px;transform:rotate(18deg);top:58%;right:6%;animation-delay:-6s}
+.s-tri{width:60px;height:52px;background:linear-gradient(135deg,var(--accent),var(--accent2));clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.25;top:80%;left:9%;animation-delay:-3s}
+.s-dots{width:110px;height:110px;background-image:radial-gradient(var(--accent2) 2px,transparent 2.4px);background-size:16px 16px;top:34%;right:3%;animation-delay:-10s}
+.s-plus{font-size:2.4rem;font-weight:300;color:var(--accent);top:46%;left:3%;animation-delay:-5s}
+@keyframes drift{to{transform:translate(50px,70px) scale(1.12)}}
+@keyframes float{to{transform:translateY(-34px) rotate(14deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-    <meta charset="UTF-8">
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:40}
+.grad{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;box-shadow:0 8px 22px color-mix(in srgb,var(--accent2) 35%,transparent)}
+.btn{transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn:not(.primary):hover{border-color:var(--accent)}
+.logo b{background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.stat strong{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat,.card{background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(8px);position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.card:hover,.stat:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.card:hover::before{opacity:1}
+.eyebrow{display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px}
+.timeline{border-left:2px solid;border-image:linear-gradient(to bottom,var(--accent),transparent) 1}
+.job::before{background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 6px var(--soft)}
+.chips span{border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.chips span:hover{transform:translateY(-2px);border-color:var(--accent)}
+.flow span{background:linear-gradient(135deg,var(--soft),transparent)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
 
-    <meta name="description"
-          content="Vipin Paulson | Enterprise Solution Architect | AWS Certified | Banking | Payments | Cloud Architecture">
 
-    <meta name="keywords"
-          content="Enterprise Solution Architect, AWS, Java, Cloud, Banking, Payments, Architecture">
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.s-dots,.s-plus{display:none}}
+@media(prefers-reduced-motion:reduce){.blob,.shape,.orbit,}
 
-    <meta name="author"
-          content="Vipin Paulson">
+/* ---- Photos ---- */
+.who{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:22px}.who .badge{margin:0}
 
-    <title>
 
-        Vipin Paulson | Enterprise Solution Architect
 
-    </title>
 
-    <!-- ==========================================================
-         GOOGLE FONT
-    =========================================================== -->
+/* ---- Hero portrait ---- */
+.portrait{position:relative;width:min(100%,380px);aspect-ratio:1/1.1;margin-left:auto}
+.ring{position:absolute;inset:0;border:2px dashed color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:50%;animation:spin 60s linear infinite}
+.frame{position:absolute;inset:7% 10% 3%;border-radius:999px 999px 36px 36px;padding:4px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 24px 60px color-mix(in srgb,var(--accent2) 30%,transparent)}
+.frame::before{content:"VP";position:absolute;inset:4px;border-radius:inherit;display:grid;place-items:center;background:linear-gradient(160deg,var(--soft),var(--surface));font-size:4.2rem;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.frame img{position:absolute;inset:4px;width:calc(100% - 8px);height:calc(100% - 8px);object-fit:cover;object-position:center top;border-radius:inherit;z-index:1}
+.chip-float{position:absolute;z-index:2;background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-size:.84rem;font-weight:600;box-shadow:var(--shadow);animation:bob 6s ease-in-out infinite alternate}
+.c1{top:14%;left:-2%}.c2{bottom:24%;left:-6%;animation-delay:-2s}.c3{bottom:6%;right:-2%;animation-delay:-4s}
+@keyframes bob{to{transform:translateY(-9px)}}
+@media(max-width:820px){.portrait{width:min(86%,320px);margin:20px auto 0}.c1{left:-4%}.c2{left:-4%}.c3{right:-4%}}
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <!-- ==========================================================
-         CSS
-    =========================================================== -->
-
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/architecture.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
+/* ---- About avatar ---- */
+.avatar{position:relative;display:block;width:132px;height:132px;margin-bottom:24px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 12px 32px color-mix(in srgb,var(--accent2) 30%,transparent)}
+.avatar::before{content:"VP";position:absolute;inset:4px;border-radius:50%;display:grid;place-items:center;background:var(--surface);font-size:2.2rem;font-weight:800;color:var(--accent)}
+.avatar img{position:absolute;inset:4px;width:calc(100% - 8px);height:calc(100% - 8px);border-radius:50%;object-fit:cover;object-position:center top;z-index:1}
+@media(max-width:820px){.avatar{width:112px;height:112px}}
+</style>
 </head>
-
 <body>
-
-<!-- ==========================================================
-     SCROLL PROGRESS
-=========================================================== -->
-
-<div class="scroll-progress"></div>
-
-<!-- ==========================================================
-     HEADER
-=========================================================== -->
-
-<header class="site-header">
-
-    <div class="container">
-
-        <div class="header-inner">
-
-            <!-- Brand -->
-
-            <a href="index.html"
-               class="brand">
-
-                    <span class="brand-mark">
-
-                        VP
-
-                    </span>
-
-                <span class="brand-text">
-
-                        Vipin Paulson
-
-                    </span>
-
-            </a>
-
-            <!-- Navigation -->
-
-            <nav class="main-nav">
-
-                <a href="pages/architecture.html">
-
-                    Architecture
-
-                </a>
-
-                <a href="pages/case-studies.html">
-
-                    Case Studies
-
-                </a>
-
-                <a href="pages/career.html">
-
-                    Career
-
-                </a>
-
-                <a href="pages/contact.html">
-
-                    Contact
-
-                </a>
-
-            </nav>
-
-            <!-- Header Actions -->
-
-            <div class="header-actions">
-
-                <button id="themeToggle"
-                        class="theme-toggle"
-                        aria-label="Toggle Theme">
-
-                    🌙
-
-                </button>
-
-                <button class="menu-toggle"
-                        aria-label="Open Navigation">
-
-                    ☰
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
-
-<!-- ==========================================================
-     MAIN
-=========================================================== -->
-
-<main>
-
-    <!-- ======================================================
-         HERO
-    ======================================================= -->
-
-    <section class="hero">
-
-        <div class="container">
-
-            <div class="hero-content reveal">
-
-                    <span class="eyebrow">
-
-                        AWS Certified Solutions Architect Associate
-
-                    </span>
-
-                <h1>
-
-                    Architecting
-                    <br>
-
-                    Digital Enterprises
-
-                </h1>
-
-                <p class="hero-description">
-
-                    Building secure, scalable cloud-native
-                    platforms that enable business transformation.
-
-                </p>
-
-                <div class="hero-highlights">
-
-                        <span>
-
-                            14+ Years
-
-                        </span>
-
-                    <span>
-
-                            Banking
-
-                        </span>
-
-                    <span>
-
-                            Payments
-
-                        </span>
-
-                    <span>
-
-                            Cloud
-
-                        </span>
-
-                </div>
-
-                <div class="hero-actions">
-
-                    <a href="pages/architecture.html"
-                       class="btn btn-primary">
-
-                        Explore Architecture
-
-                    </a>
-
-                    <a href="docs/VIPIN_PAULSON_RESUME.pdf"
-                       class="btn btn-secondary">
-
-                        Download Resume
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ======================================================
-         VISION
-    ======================================================= -->
-
-    <section class="page-section vision-section reveal">
-
-        <div class="container">
-
-            <blockquote class="vision-statement">
-
-                <p>
-
-                    “Great architecture balances business vision,
-                    engineering excellence, and long-term scalability.”
-
-                </p>
-
-            </blockquote>
-
-        </div>
-
-    </section>
-    <!-- ======================================================
-     TRUSTED BY EXPERIENCE
-======================================================= -->
-
-    <section class="page-section reveal">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                    <span class="eyebrow">
-
-                        Credibility
-
-                    </span>
-
-                <h2>
-
-                    Trusted by Experience
-
-                </h2>
-
-                <p>
-
-                    Delivering enterprise-scale architecture through
-                    business alignment, engineering excellence and
-                    cloud modernization.
-
-                </p>
-
-            </div>
-
-            <div class="dashboard-grid">
-
-                <!-- Years -->
-
-                <article class="metric-card">
-
-                        <span class="metric-label">
-
-                            Experience
-
-                        </span>
-
-                    <h3 class="metric-value"
-                        data-counter="14"
-                        data-suffix="+">
-
-                    </h3>
-
-                    <p>
-
-                        Years delivering enterprise solutions
-
-                    </p>
-
-                </article>
-
-                <!-- Solutions -->
-
-                <article class="metric-card">
-
-                        <span class="metric-label">
-
-                            Delivery
-
-                        </span>
-
-                    <h3 class="metric-value"
-                        data-counter="40"
-                        data-suffix="+">
-
-                    </h3>
-
-                    <p>
-
-                        Enterprise solutions designed and delivered
-
-                    </p>
-
-                </article>
-
-                <!-- Certification -->
-
-                <article class="metric-card">
-
-                        <span class="metric-label">
-
-                            Professional
-
-                        </span>
-
-                    <h3>
-
-                        AWS
-
-                    </h3>
-
-                    <p>
-
-                        Certified Solutions Architect
-
-                    </p>
-
-                </article>
-
-                <!-- Leadership -->
-
-                <article class="metric-card">
-
-                        <span class="metric-label">
-
-                            Leadership
-
-                        </span>
-
-                    <h3 class="metric-value"
-                        data-counter="10"
-                        data-suffix="+">
-
-                    </h3>
-
-                    <p>
-
-                        Agile engineering teams led
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         WHAT I SOLVE
-    ======================================================= -->
-
-    <section class="page-section reveal">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                    <span class="eyebrow">
-
-                        Capability
-
-                    </span>
-
-                <h2>
-
-                    What I Solve
-
-                </h2>
-
-                <p>
-
-                    Helping organizations modernize technology,
-                    simplify complexity and accelerate business value.
-
-                </p>
-
-            </div>
-
-            <div class="card-grid">
-
-                <!-- Card 1 -->
-
-                <article class="card">
-
-                    <div class="card-icon">
-
-                        🏛️
-
-                    </div>
-
-                    <h3>
-
-                        Modern Enterprise Architecture
-
-                    </h3>
-
-                    <p>
-
-                        Transform legacy systems into scalable,
-                        resilient and future-ready digital platforms.
-
-                    </p>
-
-                </article>
-
-                <!-- Card 2 -->
-
-                <article class="card">
-
-                    <div class="card-icon">
-
-                        ☁️
-
-                    </div>
-
-                    <h3>
-
-                        Cloud Transformation
-
-                    </h3>
-
-                    <p>
-
-                        Accelerate cloud adoption with secure,
-                        cost-effective and cloud-native solutions.
-
-                    </p>
-
-                </article>
-
-                <!-- Card 3 -->
-
-                <article class="card">
-
-                    <div class="card-icon">
-
-                        🔗
-
-                    </div>
-
-                    <h3>
-
-                        Enterprise Integration
-
-                    </h3>
-
-                    <p>
-
-                        Connect applications, APIs and business
-                        services using modern integration patterns.
-
-                    </p>
-
-                </article>
-
-                <!-- Card 4 -->
-
-                <article class="card">
-
-                    <div class="card-icon">
-
-                        🚀
-
-                    </div>
-
-                    <h3>
-
-                        Technology Leadership
-
-                    </h3>
-
-                    <p>
-
-                        Enable engineering teams through architecture,
-                        mentoring and technical strategy.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- ======================================================
-     IMPACT
-======================================================= -->
-
-    <section class="page-section reveal">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                    <span class="eyebrow">
-
-                        Impact
-
-                    </span>
-
-                <h2>
-
-                    Architecture That Delivered
-
-                </h2>
-
-                <p>
-
-                    Selected initiatives demonstrating how strategic architecture
-                    enables business transformation and engineering excellence.
-
-                </p>
-
-            </div>
-
-            <div class="card-grid">
-
-                <!-- ====================================== -->
-
-                <a href="pages/case-studies.html#payments"
-                   class="card feature-card">
-
-                        <span class="card-category">
-
-                            Banking & Payments
-
-                        </span>
-
-                    <h3>
-
-                        Enterprise Payments Platform
-
-                    </h3>
-
-                    <p>
-
-                        Modernized payment processing through
-                        cloud-native architecture, APIs and
-                        scalable integration.
-
-                    </p>
-
-                    <span class="card-link">
-
-                            Explore Case Study →
-
-                        </span>
-
-                </a>
-
-                <!-- ====================================== -->
-
-                <a href="pages/case-studies.html#document-ai"
-                   class="card feature-card">
-
-                        <span class="card-category">
-
-                            AI & Automation
-
-                        </span>
-
-                    <h3>
-
-                        Intelligent Document Processing
-
-                    </h3>
-
-                    <p>
-
-                        Automated document workflows using
-                        OCR, AI models and enterprise
-                        automation services.
-
-                    </p>
-
-                    <span class="card-link">
-
-                            Explore Case Study →
-
-                        </span>
-
-                </a>
-
-                <!-- ====================================== -->
-
-                <a href="pages/case-studies.html#modernization"
-                   class="card feature-card">
-
-                        <span class="card-category">
-
-                            Cloud Modernization
-
-                        </span>
-
-                    <h3>
-
-                        Enterprise Cloud Transformation
-
-                    </h3>
-
-                    <p>
-
-                        Led modernization initiatives focused on
-                        resilience, scalability and operational
-                        excellence.
-
-                    </p>
-
-                    <span class="card-link">
-
-                            Explore Case Study →
-
-                        </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         INVITATION
-    ======================================================= -->
-
-    <section class="page-section cta-section reveal">
-
-        <div class="container">
-
-            <div class="cta">
-
-                    <span class="eyebrow">
-
-                        Invitation
-
-                    </span>
-
-                <h2>
-
-                    Let's Build Together
-
-                </h2>
-
-                <p>
-
-                    Whether you're modernizing legacy platforms,
-                    designing enterprise architecture or accelerating
-                    cloud transformation, I'd be happy to connect.
-
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="pages/contact.html"
-                       class="btn btn-primary">
-
-                        Let's Connect
-
-                    </a>
-
-                    <a href="pages/architecture.html"
-                       class="btn btn-secondary">
-
-                        Explore Architecture
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+<div class="progress" id="progress"></div>
+<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+ <i class="shape s-ring"></i><i class="shape s-sq"></i><i class="shape s-tri"></i><i class="shape s-dots"></i><i class="shape s-plus">+</i></div>
+<header><div class="wrap nav">
+ <a class="logo" href="#top"><b>VP</b>Vipin Paulson</a>
+ <nav aria-label="Main"><ul id="menu">
+  <li><a href="#expertise">Expertise</a></li><li><a href="#work">Case Studies</a></li>
+  <li><a href="#career">Career</a></li><li><a href="#skills">Skills</a></li><li><a href="#credentials">Credentials</a></li>
+  <li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+ </ul></nav>
+ <div class="tools">
+  <button class="icon" id="theme" aria-label="Toggle light or dark theme" style="font-size:1.1rem;line-height:1">🌓</button>
+  <button class="icon menu" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+ </div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-grid"><div class="hero-text">
+ <div class="who">  <span class="badge">AWS Certified Solutions Architect – Associate</span>
+  <span class="badge" style="background:transparent;border:1px solid var(--line);color:var(--muted)">📍 Kochi, India · Open to opportunities</span></div>
+ <h1>Architecting <span class="grad">digital enterprises</span> that scale.</h1>
+ <p class="lead">Solution Architect with 14+ years delivering enterprise-scale solutions across Banking, Financial Services, Securities and Payments, using AWS, Java, Spring Boot, Python and Kafka.</p>
+ <div class="cta">
+  <a class="btn primary" href="#contact">Let’s connect</a>
+  <a class="btn" href="docs/VIPIN_PAULSON_RESUME.pdf">Download résumé</a>
+  <a class="btn" href="#work">View case studies</a>
+ </div></div><div class="art"><div class="portrait">
+  <span class="ring"></span>
+  <div class="frame"><img src="images/profile.jpg" alt="Portrait of Vipin Paulson" onerror="this.remove()"></div>
+  <span class="chip-float c1">☁️ AWS Certified</span>
+  <span class="chip-float c2">14+ years</span>
+  <span class="chip-float c3">Banking · Payments</span>
+ </div></div></div>
+ <div class="stats">
+  <div class="stat"><strong>14+</strong><span>Years in banking &amp; financial services</span></div>
+  <div class="stat"><strong>8</strong><span>Professional certifications</span></div>
+  <div class="stat"><strong>4</strong><span>Performance awards &amp; recognitions</span></div>
+  <div class="stat"><strong>M.Tech</strong><span>Software Engineering, BITS Pilani</span></div>
+ </div>
+</div></section>
+
+<section id="expertise" class="alt"><div class="wrap reveal">
+ <div class="eyebrow">Expertise</div><h2>What I solve</h2>
+ <p class="sub">I help organisations modernise technology, simplify complexity and accelerate business value.</p>
+ <div class="grid">
+  <div class="card"><h3>🏛️ Enterprise Architecture</h3><p>Transform legacy systems into scalable, resilient, future-ready digital platforms.</p></div>
+  <div class="card"><h3>☁️ Cloud Transformation</h3><p>Secure, cost-effective, cloud-native adoption on AWS, from landing zones to serverless.</p></div>
+  <div class="card"><h3>🔗 Enterprise Integration</h3><p>API-first and event-driven integration across applications and business services.</p></div>
+  <div class="card"><h3>🚀 Technology Leadership</h3><p>Architecture governance, mentoring and technical strategy for engineering teams.</p></div>
+ </div>
+</div></section>
+
+<section id="work"><div class="wrap reveal">
+ <div class="eyebrow">Case studies</div><h2>Architecture that delivered</h2>
+ <p class="sub">Every engagement starts with business outcomes: understand, architect, deliver, optimise.</p>
+
+ <div class="card case">
+  <div><span class="tag">Banking &amp; Payments</span><h3>Customer Payments Platform</h3>
+   <h4>Challenge</h4><ul style="list-style:none;padding:0"><li>Legacy payment systems limited scalability, slowed releases and added operational complexity.</li></ul>
+   <h4>Strategy</h4><ul><li>API-first architecture and microservices</li><li>Event-driven integration with Kafka</li><li>AWS cloud-native services</li></ul>
+   <h4>Outcomes</h4><ul><li>Faster release cycles</li><li>Improved resilience and horizontal scalability</li><li>Reduced operational overhead</li></ul></div>
+  <div class="flow"><span>Digital Channels</span><span>API Gateway</span><span>Microservices</span><span>Kafka Events</span><span>Core Banking</span></div>
+ </div>
+
+ <div class="card case">
+  <div><span class="tag">Content &amp; Automation</span><h3>Enterprise Content Management Platform</h3>
+   <h4>Challenge</h4><ul style="list-style:none;padding:0"><li>Manual document handling reduced efficiency and increased turnaround time.</li></ul>
+   <h4>Strategy</h4><ul><li>OCR-based data extraction</li><li>Workflow automation</li><li>Cloud storage</li></ul>
+   <h4>Outcomes</h4><ul><li>Less manual processing</li><li>Higher accuracy and faster turnaround</li></ul></div>
+  <div class="flow"><span>Upload</span><span>OCR</span><span>Data Extraction</span><span>Validation</span><span>Business Workflow</span></div>
+ </div>
+
+ <div class="card case">
+  <div><span class="tag">Cloud Modernisation</span><h3>AWS Cloud Adoption &amp; Modernisation</h3>
+   <h4>Challenge</h4><ul style="list-style:none;padding:0"><li>Legacy applications limited innovation and delivery speed.</li></ul>
+   <h4>Strategy</h4><ul><li>Cloud-native, container platform</li><li>CI/CD and infrastructure automation</li></ul>
+   <h4>Outcomes</h4><ul><li>Lower infrastructure cost</li><li>Faster delivery, better availability</li></ul></div>
+  <div class="flow"><span>Legacy Apps</span><span>API Layer</span><span>Containers</span><span>AWS Cloud</span><span>Observability</span></div>
+ </div>
+</div></section>
+
+<section id="career" class="alt"><div class="wrap reveal">
+ <div class="eyebrow">Career</div><h2>Growing through every opportunity</h2>
+ <p class="sub">From software engineering foundations to enterprise architecture leadership.</p>
+ <div class="timeline">
+  <div class="job"><div class="when">Oct 2018 – Feb 2026</div><h3>UST Global · Solution Architect</h3>
+   <p style="color:var(--muted)">Architecture and end-to-end delivery for large-scale banking and payments platforms.</p>
+   <div class="chips"><span>Customer Payments Platform</span><span>Enterprise Content Management Platform</span></div>
+   <ul><li>Led solution architecture and delivery across Agile teams, defining target architecture, roadmaps and technology strategy with business stakeholders</li><li>Designed and governed microservices, enterprise APIs and integration frameworks for performance, scalability and security</li><li>Drove AWS cloud adoption, CI/CD automation, DevOps practices and application modernisation</li><li>Led architecture reviews, design validations and code-quality governance; ran proofs of concept to validate emerging technologies</li><li>Mentored engineers and architects, acting as technical liaison between business and engineering</li></ul>
+   <div class="chips"><span>Java</span><span>Spring Boot</span><span>Python</span><span>AWS Lambda</span><span>API Gateway</span><span>Kafka</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Jenkins</span></div></div>
+  <div class="job"><div class="when">Sep 2011 – Oct 2018</div><h3>Wipro Technologies · Senior Software Engineer</h3>
+   <p style="color:var(--muted)">Financial services applications, reporting and data platforms. Projects: Central Bank Reporting, Cloud Capacity Projection Platform, ITPXO, Corporate Billing System.</p>
+   <ul><li>Led and mentored a team of 10 engineers delivering enterprise financial services applications</li><li>Owned solution design, architecture and delivery in collaboration with stakeholders</li><li>Built scalable applications, ETL pipelines and reporting systems; optimised database schemas, stored procedures and SQL</li><li>Led the full SDLC from design and code reviews to testing and production deployments</li></ul>
+   <div class="chips"><span>Java</span><span>Oracle</span><span>Teradata</span><span>SQL</span><span>ETL</span><span>Hadoop (basics)</span></div></div>
+ </div>
+</div></section>
+
+<section id="skills"><div class="wrap reveal">
+ <div class="eyebrow">Skills</div><h2>Technology ecosystem</h2>
+ <p class="sub">Capabilities built through enterprise delivery in banking, financial services and payments.</p>
+ <div class="grid">
+  <div class="card"><h3>Cloud &amp; DevOps</h3><div class="chips"><span>AWS</span><span>Azure</span><span>Terraform</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>CI/CD</span></div></div>
+  <div class="card"><h3>Backend</h3><div class="chips"><span>Java / J2EE</span><span>Spring Boot</span><span>Hibernate</span><span>Python</span><span>REST APIs</span></div></div>
+  <div class="card"><h3>Messaging &amp; Integration</h3><div class="chips"><span>Apache Kafka</span><span>JMS</span><span>API Gateway</span><span>API Integration</span></div></div>
+  <div class="card"><h3>Databases</h3><div class="chips"><span>Oracle</span><span>PostgreSQL</span><span>DynamoDB</span><span>Teradata</span><span>SQL</span></div></div>
+  <div class="card"><h3>Document Processing</h3><div class="chips"><span>OCR</span><span>IDP</span><span>Invoice Automation</span><span>Google OCR</span><span>Azure AI Document Intelligence</span></div></div>
+  <div class="card"><h3>Architecture</h3><div class="chips"><span>Event-Driven</span><span>Serverless</span><span>Microservices</span><span>API-First</span><span>Domain-Driven Design</span><span>Cloud Native</span></div></div>
+ </div>
+</div></section>
+
+<section id="credentials"><div class="wrap reveal">
+ <div class="eyebrow">Credentials</div><h2>Education, certifications &amp; recognition</h2>
+ <p class="sub">Formal learning and professional validation behind the experience.</p>
+ <div class="grid">
+  <div class="card"><h3>🎓 Education</h3><ul style="padding-left:18px;color:var(--muted);font-size:.95rem"><li>M.Tech, Software Engineering: BITS Pilani, Rajasthan (2016)</li><li>B.Sc. Electronics: University of Pune (2011)</li></ul></div>
+  <div class="card"><h3>📜 Certifications</h3><ul style="padding-left:18px;color:var(--muted);font-size:.95rem"><li><b style="color:var(--ink)">AWS Certified Solutions Architect – Associate</b></li><li>ITIL V3 Foundation</li><li>Agile Concepts &amp; Agile Scrum Training</li><li>Software Configuration Management</li><li>Hadoop Fundamentals</li><li>Securities 101</li><li>Servant Leadership Program</li></ul></div>
+  <div class="card"><h3>🏆 Awards</h3><ul style="padding-left:18px;color:var(--muted);font-size:.95rem"><li>Shining Star Award</li><li>Super Star Award</li><li>Dream Team Award</li><li>Feather in the Cap Award</li></ul></div>
+ </div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap reveal split">
+ <div><span class="avatar"><img src="images/profile_a.jpg" alt="Vipin Paulson" loading="lazy" onerror="this.remove()"></span>
+  <div class="eyebrow">About</div><h2>Building technology with purpose</h2>
+  <p class="sub" style="margin-bottom:0">Technology fascinates me for its ability to solve real-world challenges. Successful technology is defined not by frameworks or cloud platforms, but by how well it supports people, processes and business objectives. I design scalable, secure, adaptable architectures that let organisations innovate with confidence.</p></div>
+ <div class="grid" style="grid-template-columns:1fr 1fr">
+  <div class="card"><h3>Ownership</h3><p>Responsible for outcomes, not just deliverables.</p></div>
+  <div class="card"><h3>Simplicity</h3><p>The best solutions are often the simplest.</p></div>
+  <div class="card"><h3>Collaboration</h3><p>Great ideas emerge through teamwork and trust.</p></div>
+  <div class="card"><h3>Mentoring</h3><p>Empower, coach and share knowledge.</p></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap reveal split">
+ <div><div class="eyebrow">Contact</div><h2>Every great solution starts with a conversation</h2>
+  <p class="sub" style="margin-bottom:0">Open to enterprise architecture, solution design, cloud transformation, technical leadership and consulting opportunities.</p>
+  <div class="links" id="links"></div></div>
+ <form id="form">
+  <input name="name" placeholder="Your name" required aria-label="Your name">
+  <input name="email" type="email" placeholder="Your email" required aria-label="Your email">
+  <input name="subject" placeholder="Subject" aria-label="Subject">
+  <textarea name="msg" rows="5" placeholder="Tell me about your project or opportunity" required aria-label="Message"></textarea>
+  <input name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+  <button class="btn primary" id="send" type="submit">Send message</button>
+  <p id="status" role="status" aria-live="polite" style="font-size:.92rem;min-height:1.4em"></p>
+ </form>
+</div></section>
 </main>
 
+<footer><div class="wrap"><span>© 2026 Vipin Paulson · Enterprise Solution Architect</span><a href="#top">Back to top ↑</a></div></footer>
 
+<script>
+// ✏️ EDIT THESE: links with an empty value are hidden automatically.
+// formEndpoint: create a free form at https://formspree.io and paste its URL, e.g. "https://formspree.io/f/abcdwxyz".
+// With it, messages are delivered straight to your inbox. Without it, the form falls back to the visitor's email app (needs "email" set).
+const CONFIG={email:"paulsonvipin@gmail.com",formEndpoint:"",linkedin:"https://www.linkedin.com/in/vipin-paulson",github:"",resume:"docs/VIPIN_PAULSON_RESUME.pdf"};
 
-<!-- ======================================================
-     FOOTER
-======================================================= -->
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
+document.getElementById("theme").onclick=()=>{
+ const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+ root.dataset.theme=dark?"light":"dark";
+ try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}
+};
+const menu=document.getElementById("menu"),burger=document.getElementById("burger");
+burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+menu.onclick=e=>{if(e.target.tagName==="A"){menu.classList.remove("open");burger.setAttribute("aria-expanded",false)}};
 
-<footer class="site-footer">
+const links=document.getElementById("links");
+[["Email",CONFIG.email&&"mailto:"+CONFIG.email,CONFIG.email],["LinkedIn",CONFIG.linkedin,"View profile"],["GitHub",CONFIG.github,"Visit GitHub"]]
+ .forEach(([l,h,t])=>{if(h){const a=document.createElement("a");a.href=h;if(l!=="Email")a.target="_blank",a.rel="noopener";a.innerHTML="<span>"+l+"</span><span>"+t+" →</span>";links.appendChild(a)}});
 
-    <div class="container">
+const form=document.getElementById("form"),statusEl=document.getElementById("status"),sendBtn=document.getElementById("send");
+const say=(t,ok)=>{statusEl.textContent=t;statusEl.style.color=ok?"var(--accent)":"#d9534f"};
+form.onsubmit=async e=>{
+ e.preventDefault();
+ const f=new FormData(form);
+ if(f.get("_gotcha"))return;
+ const subject=f.get("subject")||"Website enquiry";
+ if(CONFIG.formEndpoint){
+  sendBtn.disabled=true;sendBtn.textContent="Sending…";say("",true);
+  try{
+   const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{Accept:"application/json"},body:f});
+   if(r.ok){form.reset();say("Thank you! Your message has been sent. I’ll get back to you soon.",true)}
+   else throw new Error("failed");
+  }catch(err){say("Sorry, the message couldn’t be sent. Please try again"+(CONFIG.email?" or email "+CONFIG.email:"")+".",false)}
+  sendBtn.disabled=false;sendBtn.textContent="Send message";
+  return;
+ }
+ if(CONFIG.email){
+  const body="From: "+f.get("name")+" ("+f.get("email")+")\n\n"+f.get("msg");
+  location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  say("Opening your email app… if nothing opens, please write to "+CONFIG.email+" directly.",true);
+  return;
+ }
+ say("The contact form isn’t connected yet. Please reach out via LinkedIn.",false);
+};
 
-        <div class="footer-content">
-
-            <div class="footer-brand">
-
-                <h3>
-
-                    Vipin Paulson
-
-                </h3>
-
-                <p>
-
-                    Enterprise Solution Architect
-
-                </p>
-
-            </div>
-
-            <nav class="footer-nav">
-
-                <a href="pages/architecture.html">
-
-                    Architecture
-
-                </a>
-
-                <a href="pages/case-studies.html">
-
-                    Case Studies
-
-                </a>
-
-                <a href="pages/career.html">
-
-                    Career
-
-                </a>
-
-                <a href="pages/contact.html">
-
-                    Contact
-
-                </a>
-
-            </nav>
-
-            <div class="footer-social">
-
-                <a href="#">
-
-                    LinkedIn
-
-                </a>
-
-                <a href="#">
-
-                    GitHub
-
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-
-                © 2026 Vipin Paulson.
-                Crafted with purpose, clarity and modern engineering.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<!-- ======================================================
-     BACK TO TOP
-======================================================= -->
-
-<button class="back-to-top"
-        aria-label="Back to Top">
-
-    ↑
-
-</button>
-
-
-
-<!-- ======================================================
-     JAVASCRIPT
-======================================================= -->
-
-<script src="js/navigation.js" defer></script>
-
-<script src="js/animations.js" defer></script>
-
-<script src="js/counters.js" defer></script>
-
-<script src="js/charts.js" defer></script>
-
-<script src="js/theme.js" defer></script>
-
-<script src="js/contact.js" defer></script>
-
-<script src="js/app.js" defer></script>
-
+const bar=document.getElementById("progress");
+addEventListener("scroll",()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
 </body>
-
 </html>

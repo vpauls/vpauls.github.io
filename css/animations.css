@@ -433,3 +433,52 @@ scroll-behavior:auto !important;
 }
 
 }
+
+/*==========================================================
+BG
+==========================================================*/
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            transparent 75%,
+
+            rgba(5,8,18,.18) 100%
+
+        );
+
+    z-index:-1;
+
+}
+
+@keyframes glowFloat{
+
+    0%,100%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:
+
+            translate(-40px,30px)
+
+            scale(1.05);
+
+    }
+
+}

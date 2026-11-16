@@ -575,3 +575,30 @@ a{
     }
 
 }
+
+
+/*==========================================================
+BG
+==========================================================*/
+
+@media (max-width:992px){
+
+    .global-floating-bg img{
+
+        width:110vw;
+
+        opacity:.035;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .global-floating-bg{
+
+        display:none;
+
+    }
+
+}
